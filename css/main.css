@@ -1,0 +1,1676 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic);
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 100%
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block
+}
+
+b, strong {
+    font-weight: 700
+}
+
+img {
+    color: transparent;
+    font-size: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic
+}
+
+li {
+    display: list-item;
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption, td, th {
+    font-weight: 400;
+    vertical-align: top;
+    text-align: left
+}
+
+q {
+    quotes: none
+}
+
+q:after, q:before {
+    content: ''
+}
+
+small, sub, sup {
+    font-size: 75%
+}
+
+sub, sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+svg {
+    overflow: hidden
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0
+}
+
+.clear:after, .clear:before {
+    clear: both;
+    display: block;
+    zoom: 1;
+    content: ''
+}
+
+.right {
+    float: right
+}
+
+.left {
+    float: left
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir/AvenirNextW1GThin.eot);
+    src: url(fonts/Avenir/AvenirNextW1GThin.eot?#iefix) format('embedded-opentype'), url(fonts/Avenir/AvenirNextW1GThin.woff2) format('woff2'), url(fonts/Avenir/AvenirNextW1GThin.woff) format('woff'), url(fonts/Avenir/AvenirNextW1GThin.ttf) format('truetype'), url(fonts/Avenir/AvenirNextW1GThin.svg#Avenir) format('svg');
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir/AvenirNextW1GLight.eot);
+    src: url(fonts/Avenir/AvenirNextW1GLight.eot?#iefix) format('embedded-opentype'), url(fonts/Avenir/AvenirNextW1GLight.woff2) format('woff2'), url(fonts/Avenir/AvenirNextW1GLight.woff) format('woff'), url(fonts/Avenir/AvenirNextW1GLight.ttf) format('truetype'), url(fonts/Avenir/AvenirNextW1GLight.svg#Avenir) format('svg');
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir/AvenirNextW1GRegular.eot);
+    src: url(fonts/Avenir/AvenirNextW1GRegular.eot?#iefix) format('embedded-opentype'), url(fonts/Avenir/AvenirNextW1GRegular.woff2) format('woff2'), url(fonts/Avenir/AvenirNextW1GRegular.woff) format('woff'), url(fonts/Avenir/AvenirNextW1GRegular.ttf) format('truetype'), url(fonts/Avenir/AvenirNextW1GRegular.svg#Avenir) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir/AvenirNextW1GMedium.eot);
+    src: url(fonts/Avenir/AvenirNextW1GMedium.eot?#iefix) format('embedded-opentype'), url(fonts/Avenir/AvenirNextW1GMedium.woff2) format('woff2'), url(fonts/Avenir/AvenirNextW1GMedium.woff) format('woff'), url(fonts/Avenir/AvenirNextW1GMedium.ttf) format('truetype'), url(fonts/Avenir/AvenirNextW1GMedium.svg#Avenir) format('svg');
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir/AvenirNextW1GDemi.eot);
+    src: url(fonts/Avenir/AvenirNextW1GDemi.eot?#iefix) format('embedded-opentype'), url(fonts/Avenir/AvenirNextW1GDemi.woff2) format('woff2'), url(fonts/Avenir/AvenirNextW1GDemi.woff) format('woff'), url(fonts/Avenir/AvenirNextW1GDemi.ttf) format('truetype'), url(fonts/Avenir/AvenirNextW1GDemi.svg#Avenir) format('svg');
+    font-weight: 600;
+    font-style: normal
+}
+
+/*! jQuery UI - v1.11.4 - 2015-12-11
+* http://jqueryui.com
+* Includes: core.css, autocomplete.css, datepicker.css, menu.css, selectmenu.css, theme.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/
+* Copyright jQuery Foundation and other contributors; Licensed MIT */
+.ui-helper-hidden {
+    display: none
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none
+}
+
+.ui-helper-clearfix:after, .ui-helper-clearfix:before {
+    content: "";
+    display: table;
+    border-collapse: collapse
+}
+
+.ui-helper-clearfix:after {
+    clear: both
+}
+
+.ui-helper-clearfix {
+    min-height: 0
+}
+
+.ui-helper-zfix {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.ui-front {
+    z-index: 100
+}
+
+.ui-state-disabled {
+    cursor: default !important
+}
+
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.ui-datepicker {
+    display: none
+}
+
+.ui-datepicker .ui-datepicker-header {
+    position: relative
+}
+
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev {
+    position: absolute
+}
+
+.ui-datepicker .ui-datepicker-title {
+    text-align: center
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width: 45%
+}
+
+.ui-datepicker table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.ui-datepicker th {
+    text-align: center;
+    border: 0
+}
+
+.ui-datepicker td a, .ui-datepicker td span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none
+}
+
+.ui-datepicker.ui-datepicker-multi {
+    width: auto
+}
+
+.ui-datepicker-multi .ui-datepicker-group {
+    float: left
+}
+
+.ui-datepicker-multi .ui-datepicker-group table {
+    width: 100%
+}
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 47.5%
+}
+
+.ui-datepicker-group-first {
+    margin-right: 5%
+}
+
+.ui-datepicker-multi-3 .ui-datepicker-group {
+    width: 33.3%
+}
+
+.ui-datepicker-multi-4 .ui-datepicker-group {
+    width: 25%
+}
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+    border-left-width: 0
+}
+
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+    clear: left
+}
+
+.ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0
+}
+
+.ui-datepicker-rtl {
+    direction: rtl
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev {
+    right: 2px;
+    left: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-next {
+    left: 2px;
+    right: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+    right: 1px;
+    left: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+    left: 1px;
+    right: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+    clear: right
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+    float: left
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current, .ui-datepicker-rtl .ui-datepicker-group {
+    float: right
+}
+
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+    border-right-width: 0;
+    border-left-width: 1px
+}
+
+.ui-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    outline: 0
+}
+
+.ui-menu .ui-menu {
+    position: absolute
+}
+
+.ui-menu .ui-menu-item {
+    position: relative;
+    margin: 0;
+    cursor: pointer
+}
+
+.ui-selectmenu-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    display: none
+}
+
+.ui-selectmenu-menu .ui-menu {
+    height: 200px;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.ui-selectmenu-open {
+    display: block
+}
+
+.ui-selectmenu-button {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.ui-selectmenu-button span.ui-selectmenu-text {
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+a {
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    text-decoration: none
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font: 400 1rem Avenir, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    min-width: 320px;
+    background: #fff;
+    -webkit-text-size-adjust: none
+}
+
+html {
+    height: 100%
+}
+
+input, textarea {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none
+}
+
+.container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 1130px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.mobile {
+    display: none
+}
+
+@media all and (max-width: 767px) {
+    .mobile {
+        display: block
+    }
+}
+
+@media all and (max-width: 767px) {
+    .desktop {
+        display: none
+    }
+}
+
+.small-title {
+    font-size: 56px;
+    font-weight: 100;
+    color: #fff;
+    line-height: 56px;
+    text-align: center;
+    padding-top: 40px
+}
+
+.small-title span {
+    font-size: 28px;
+    font-weight: 300;
+    display: block
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: color .4s ease-in-out 0s;
+    -moz-transition: color .4s ease-in-out 0s;
+    -ms-transition: color .4s ease-in-out 0s;
+    -o-transition: color .4s ease-in-out 0s;
+    transition: color .4s ease-in-out 0s;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    font: 600 14px/50px Avenir, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: block;
+    font-style: normal;
+    background: #f4a137;
+    max-width: 310px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 auto
+}
+
+.btn:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: transform .5s ease-out 0s;
+    -moz-transition: transform .5s ease-out 0s;
+    -ms-transition: transform .5s ease-out 0s;
+    -o-transition: transform .5s ease-out 0s;
+    transition: transform .5s ease-out 0s;
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: scale(0, 1);
+    -moz-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    -o-transform: scale(0, 1);
+    transform: scale(0, 1);
+    content: "";
+    z-index: -1;
+    background: #e07e00
+}
+
+.btn:focus, .btn:hover {
+    color: #fff
+}
+
+.btn:focus:before, .btn:hover:before {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1)
+}
+
+.rubl {
+    font-style: normal
+}
+
+.rubl:before {
+    font-family: "PT Sans";
+    content: "\20B7 "
+}
+
+header {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-image: url(images/bg/top.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    min-height: 600px;
+    position: relative
+}
+
+.scroll-tab {
+    width: 21px;
+    height: 67px;
+    background: url(images/icons.png) no-repeat 0 -122px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    -webkit-animation: scroll-tab 2s infinite;
+    -moz-animation: scroll-tab 2s infinite;
+    -o-animation: scroll-tab 2s infinite;
+    -ms-animation: scroll-tab 2s infinite;
+    animation: scroll-tab 2s infinite;
+    margin-left: -10px;
+    cursor: pointer
+}
+
+.scroll-tab:hover {
+    background-position: -24px -122px
+}
+
+@-webkit-keyframes scroll-tab {
+    0% {
+        bottom: 30px
+    }
+    50% {
+        bottom: 40px
+    }
+    100% {
+        bottom: 30px
+    }
+}
+
+@-moz-keyframes scroll-tab {
+    0% {
+        bottom: 30px
+    }
+    50% {
+        bottom: 40px
+    }
+    100% {
+        bottom: 30px
+    }
+}
+
+@-ms-keyframes scroll-tab {
+    0% {
+        bottom: 30px
+    }
+    50% {
+        bottom: 40px
+    }
+    100% {
+        bottom: 30px
+    }
+}
+
+@-o-keyframes scroll-tab {
+    0% {
+        bottom: 30px
+    }
+    50% {
+        bottom: 40px
+    }
+    100% {
+        bottom: 30px
+    }
+}
+
+@keyframes scroll-tab {
+    0% {
+        bottom: 30px
+    }
+    50% {
+        bottom: 40px
+    }
+    100% {
+        bottom: 30px
+    }
+}
+
+.top-panel {
+    padding-top: 15px;
+    position: relative
+}
+
+.top-panel .right-side {
+    float: right;
+    padding-top: 20px
+}
+
+.sticky.top-panel .right-side {
+    padding-top: 21px
+}
+
+.top-panel nav {
+    float: left;
+    margin-top: 5px
+}
+
+.sticky.top-panel nav {
+    margin-top: -2px
+}
+
+.top-panel nav li {
+    float: left;
+    margin-right: 35px;
+    font-size: 18px;
+    letter-spacing: -.1px
+}
+
+.sticky.top-panel nav li {
+    font-size: 16px;
+    margin-right: 30px
+}
+
+.top-panel nav li a {
+    color: #fff
+}
+
+.top-panel nav li a:hover {
+    color: #f4a137
+}
+
+.top-panel .tel {
+    float: left;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: -.1px
+}
+
+.top-panel .tel:hover {
+    color: #f4a137
+}
+
+.sticky.top-panel .tel {
+    font-size: 18px
+}
+
+.top-panel .container {
+    position: relative
+}
+
+.top-panel.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-animation: panel 1.5s;
+    -moz-animation: panel 1.5s;
+    -o-animation: panel 1.5s;
+    -ms-animation: panel 1.5s;
+    animation: panel 1.5s;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    padding-top: 0
+}
+
+@-webkit-keyframes panel {
+    0% {
+        top: -60px
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-moz-keyframes panel {
+    0% {
+        top: -60px
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-ms-keyframes panel {
+    0% {
+        top: -60px
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-o-keyframes panel {
+    0% {
+        top: -60px
+    }
+    100% {
+        top: 0
+    }
+}
+
+@keyframes panel {
+    0% {
+        top: -60px
+    }
+    100% {
+        top: 0
+    }
+}
+
+.logo {
+    float: left;
+    color: #fff;
+    width: 225px
+}
+
+.logo:hover {
+    opacity: .7
+}
+
+.sticky .logo {
+    margin-top: 10px;
+    width: 185px
+}
+
+.logo img {
+    float: left;
+    margin-right: 15px
+}
+
+.sticky .logo img {
+    width: 35px;
+    margin-right: 10px
+}
+
+.logo p {
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 3px
+}
+
+.sticky .logo p {
+    font-size: 21px;
+    padding-top: 0
+}
+
+.logo span {
+    display: block;
+    font-size: 14px
+}
+
+.sticky .logo span {
+    font-size: 12px
+}
+
+.helpers {
+    position: absolute;
+    right: 15px;
+    top: 4px;
+    width: 155px
+}
+
+.sticky .helpers {
+    display: block
+}
+
+.helpers .lang {
+    float: right
+}
+
+.helpers .lang li {
+    float: left;
+    margin-left: 12px
+}
+
+.helpers .lang a {
+    width: 16px;
+    height: 11px;
+    display: block;
+    background: url(images/icons.png) no-repeat
+}
+
+.helpers .lang a.en {
+    background-position: -77px -74px
+}
+
+.helpers .lang a.es {
+    background-position: -97px -74px
+}
+
+.helpers .lang a.ru {
+    background-position: -57px -74px
+}
+
+.helpers .lang a:hover {
+    opacity: .7
+}
+
+.helpers .currency {
+    position: relative;
+    float: left
+}
+
+.helpers .currency span {
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+    padding-right: 15px;
+    position: relative;
+    top: -6px
+}
+
+.helpers .currency span:after {
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    content: '';
+    pointer-events: none;
+    border-top-color: #fff;
+    border-width: 4px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s
+}
+
+.helpers .currency span:hover {
+    color: #f4a137
+}
+
+.helpers .currency span:hover:after {
+    border-top-color: #f4a137
+}
+
+.helpers .currency ul {
+    position: absolute;
+    left: -7px;
+    top: -90px;
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    background: #2c2c2c;
+    padding: 7px 15px 4px;
+    font-size: 12px
+}
+
+.helpers .currency ul.show {
+    top: 0
+}
+
+.helpers .currency ul li {
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    white-space: nowrap;
+    color: #fff;
+    margin-bottom: 3px;
+    cursor: pointer
+}
+
+.helpers .currency ul li.active, .helpers .currency ul li:hover {
+    color: #f4a137
+}
+
+.helpers .currency .rubl {
+    font-size: 13px
+}
+
+.main-search {
+    max-width: 950px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto
+}
+
+.main-search p {
+    font-size: 42px;
+    font-weight: 100;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    letter-spacing: -.1px
+}
+
+.search-tab input {
+    width: 100%;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    background: rgba(255, 255, 255, .25);
+    color: #fff;
+    font: 400 16px Avenir, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding: 0 20px
+}
+
+.search-tab input:focus {
+    background: rgba(255, 255, 255, .4)
+}
+
+.search-tab .col-1 {
+    width: 15%;
+    float: left;
+    margin-right: 1%
+}
+
+.search-tab .col-2 {
+    width: 30%;
+    float: left;
+    margin-right: 1%
+}
+
+.search-tab .btn {
+    float: left;
+    width: 21%
+}
+
+::-webkit-input-placeholder {
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+    color: #fff
+}
+
+::-moz-placeholder {
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+    color: #fff
+}
+
+:-ms-input-placeholder {
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+    color: #fff
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+:focus::-moz-placeholder {
+    color: transparent
+}
+
+:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+input[placeholder] {
+    text-overflow: ellipsis
+}
+
+input::-moz-placeholder {
+    text-overflow: ellipsis
+}
+
+input:-ms-input-placeholder {
+    text-overflow: ellipsis
+}
+
+#place-wrapper .ui-autocomplete {
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    background: #fff
+}
+
+#place-wrapper .ui-autocomplete li {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    cursor: pointer;
+    padding: 0 20px;
+    color: #000
+}
+
+#place-wrapper .ui-autocomplete li:hover {
+    background: #f4a137;
+    color: #fff
+}
+
+#guests-wrapper {
+    position: relative
+}
+
+#guests-wrapper:after {
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    content: '';
+    border-top-color: #fff;
+    border-width: 6px;
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    pointer-events: none
+}
+
+#guests-wrapper .ui-selectmenu-button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    width: 100% !important;
+    height: 50px !important;
+    background: rgba(255, 255, 255, .25);
+    color: #fff;
+    padding: 0 30px 0 20px;
+    display: block
+}
+
+#guests-wrapper .ui-selectmenu-button:focus {
+    background: rgba(255, 255, 255, .4)
+}
+
+#guests-wrapper .ui-selectmenu-button .ui-selectmenu-text {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 50px
+}
+
+#guests-wrapper .ui-selectmenu-menu {
+    background: #fff
+}
+
+#guests-wrapper .ui-selectmenu-menu li {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .5s ease-in-out 0s;
+    -moz-transition: all .5s ease-in-out 0s;
+    -ms-transition: all .5s ease-in-out 0s;
+    -o-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    cursor: pointer;
+    padding: 0 20px;
+    color: #000
+}
+
+#guests-wrapper .ui-selectmenu-menu li:hover {
+    background: #f4a137;
+    color: #fff
+}
+
+.ui-datepicker {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 495px;
+    background: rgba(255, 255, 255, .9);
+    padding: 20px
+}
+
+.ui-datepicker-next, .ui-datepicker-prev {
+    width: 30px;
+    height: 30px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    border: 1px solid;
+    cursor: pointer !important;
+    text-align: center
+}
+
+.ui-datepicker-next:hover, .ui-datepicker-prev:hover {
+    border-color: #b4b3b3
+}
+
+.ui-datepicker-next span, .ui-datepicker-prev span {
+    display: none
+}
+
+.ui-datepicker-next.ui-state-disabled, .ui-datepicker-prev.ui-state-disabled {
+    border-color: #b4b3b3;
+    cursor: inherit !important
+}
+
+.ui-datepicker-prev {
+    left: 0
+}
+
+.ui-datepicker-prev:before {
+    width: 16px;
+    height: 11px;
+    position: absolute;
+    left: 7px;
+    top: 9px;
+    background: url(images/icons.png) no-repeat -32px -89px;
+    content: '';
+    pointer-events: none
+}
+
+.ui-datepicker-prev.ui-state-disabled:before, .ui-datepicker-prev:hover:before {
+    background-position: -32px -104px
+}
+
+.ui-datepicker-next {
+    right: 0
+}
+
+.ui-datepicker-next:before {
+    width: 16px;
+    height: 11px;
+    position: absolute;
+    left: 7px;
+    top: 9px;
+    background: url(images/icons.png) no-repeat -53px -89px;
+    content: '';
+    pointer-events: none
+}
+
+.ui-datepicker-next.ui-state-disabled:before, .ui-datepicker-next:hover:before {
+    background-position: -53px -104px
+}
+
+.ui-datepicker-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 15px
+}
+
+.ui-datepicker-calendar th {
+    font-size: 16px;
+    font-weight: 500;
+    color: #b4b3b3;
+    text-transform: lowercase;
+    padding-bottom: 10px
+}
+
+.ui-datepicker-calendar td {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    border: 1px solid #d9d9d9
+}
+
+.ui-datepicker-calendar td a {
+    color: #000
+}
+
+.ui-datepicker-calendar td a.ui-state-active, .ui-datepicker-calendar td a:hover {
+    background: #f4a137;
+    color: #fff
+}
+
+.ui-datepicker-calendar td span {
+    color: #b4b3b3
+}
+
+.city {
+    width: 100%;
+    height: 190px;
+    background: url(images/bg/city.jpg) no-repeat top center
+}
+
+.direction {
+    padding: 45px 0 65px
+}
+
+.direction .three-block {
+    overflow: hidden
+}
+
+.direction .three-block a {
+    width: 48.2%;
+    margin: 0 1.8% 20px
+}
+
+.direction .three-block a:first-child, .direction .three-block a:last-child {
+    width: 24.1%;
+    margin: 0 0 20px
+}
+
+.direction .two-block {
+    overflow: hidden
+}
+
+.direction .two-block a {
+    width: 49.1%;
+    margin: 0 1.8% 20px 0
+}
+
+.direction .two-block a:last-child {
+    margin: 0 0 20px
+}
+
+.direction .hidden-blocks {
+    display: none
+}
+
+.direction a {
+    height: 265px;
+    float: left;
+    overflow: hidden;
+    position: relative
+}
+
+.direction a:after {
+    position: absolute;
+    left: 50%;
+    top: -75px;
+    width: 70px;
+    height: 70px;
+    -webkit-transition: all .4s ease-in-out 0s;
+    -moz-transition: all .4s ease-in-out 0s;
+    -ms-transition: all .4s ease-in-out 0s;
+    -o-transition: all .4s ease-in-out 0s;
+    transition: all .4s ease-in-out 0s;
+    content: '';
+    background: url(images/icons.png) no-repeat -58px 0;
+    margin-left: -35px
+}
+
+.direction a:hover span {
+    background: rgba(244, 161, 55, .9);
+    height: 100%;
+    padding-top: 205px;
+}
+
+.direction a:hover:after {
+    top: 90px
+}
+
+.direction img {
+    min-width: 100%;
+    height: 100%
+}
+
+.direction span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all .4s ease-in-out 0s;
+    -moz-transition: all .4s ease-in-out 0s;
+    -ms-transition: all .4s ease-in-out 0s;
+    -o-transition: all .4s ease-in-out 0s;
+    transition: all .4s ease-in-out 0s;
+    width: 100%;
+    height: 60px;
+    font-size: 22px;
+    line-height: 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    background: #000
+}
+
+.show-direction {
+    margin-top: 35px
+}
+
+.tourist {
+    width: 100%;
+    height: 190px;
+    background: url(images/bg/tourist.jpg) no-repeat top center
+}
+
+.tourist-info {
+    padding: 45px 0 115px;
+    overflow: hidden
+}
+
+.tourist-info img {
+    min-width: 100%;
+    height: 100%
+}
+
+.tourist-info span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transition: all .2s ease-in-out 0s;
+    -moz-transition: all .2s ease-in-out 0s;
+    -ms-transition: all .2s ease-in-out 0s;
+    -o-transition: all .2s ease-in-out 0s;
+    transition: all .2s ease-in-out 0s;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    margin-top: -30px;
+    background: rgba(244, 161, 55, .95)
+}
+
+.tourist-info a {
+    overflow: hidden;
+    position: relative;
+    display: block
+}
+
+.tourist-info a:hover span {
+    margin-top: 0;
+    top: 0;
+    height: 265px;
+    line-height: 265px
+}
+
+.tourist-info .one-third {
+    width: 24.1%;
+    float: left;
+    margin-right: 1.8%
+}
+
+.tourist-info .one-third a {
+    width: 100%;
+    height: 550px
+}
+
+.tourist-info .one-third a:hover span {
+    height: 585px;
+    line-height: 585px;
+}
+
+.tourist-info .two-third {
+    width: 74.1%;
+    float: left
+}
+
+.tourist-info .two-third .row {
+    margin-bottom: 20px;
+    overflow: hidden
+}
+
+.tourist-info .two-third a {
+    float: left;
+    width: 32.55%
+}
+
+.tourist-info .two-third a:first-child {
+    margin-right: 2.45%
+}
+
+.tourist-info .two-third a.large {
+    width: 65%
+}
+
+.about-project .title {
+    font-size: 56px;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px
+}
+
+.project-wrapper {
+    padding: 65px 15px 165px;
+    margin-bottom: 80px;
+    background: #f4a137 url(images/pattern.png) repeat-x -200px -15px
+}
+
+.project-info {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 595px;
+    width: 95%;
+    padding: 50px 5% 15px;
+    background: #fff;
+    margin: 0 auto
+}
+
+.project-info .hidden {
+    display: none
+}
+
+.project-info p {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -.1px;
+    margin-bottom: 35px
+}
+
+.project-info p.center {
+    text-align: center
+}
+
+.show-project {
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+    font-size: 20px;
+    color: #f4a137;
+    font-style: normal;
+    cursor: pointer;
+    border-bottom: 1px solid
+}
+
+.show-project:hover {
+    color: #f9ce98
+}
+
+.owner {
+    padding-bottom: 70px;
+    text-align: center
+}
+
+.owner .title {
+    font-size: 56px;
+    font-weight: 100;
+    margin-bottom: 35px
+}
+
+.owner img {
+    margin-bottom: 35px;
+    max-width: 100%
+}
+
+.owner .description {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 35px
+}
+
+footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(images/bg/footer.jpg) repeat-y top center;
+    min-height: 325px;
+    padding-top: 65px;
+    color: #fff
+}
+
+footer .container {
+    overflow: hidden
+}
+
+.copyright {
+    width: 22%;
+    min-width: 160px;
+    float: left;
+    font-size: 14px;
+    margin-top: 10px
+}
+
+.bottom-links {
+    font-size: 16px;
+    line-height: 34px;
+    float: left;
+    width: 30%;
+    min-width: 220px
+}
+
+.bottom-links a {
+    color: #fff
+}
+
+.bottom-links a:hover {
+    color: #f4a137
+}
+
+.bottom-contacts {
+    width: 18%;
+    min-width: 170px;
+    float: right;
+    margin-top: 10px
+}
+
+.bottom-contacts p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    position: relative
+}
+
+.bottom-contacts a {
+    color: #fff;
+    padding-left: 25px;
+    position: relative
+}
+
+.bottom-contacts a:hover {
+    color: #f4a137
+}
+
+.bottom-contacts a:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+    content: ''
+}
+
+.bottom-contacts a.phone:before {
+    width: 12px;
+    height: 13px;
+    background: url(images/icons.png) no-repeat 0 -104px;
+    display: block;
+    top: 5px
+}
+
+.bottom-contacts a.phone:hover:before {
+    background-position: -15px -104px
+}
+
+.bottom-contacts a.mail:before {
+    width: 13px;
+    height: 9px;
+    background: url(images/icons.png) no-repeat 0 -90px;
+    display: block;
+    top: 7px
+}
+
+.bottom-contacts a.mail:hover:before {
+    background-position: -16px -90px
+}
+
+.social-links {
+    margin-top: 35px
+}
+
+.social-links li {
+    float: left;
+    margin-right: 10px
+}
+
+.social-links a {
+    width: 25px;
+    height: 25px;
+    background: url(images/icons.png) no-repeat 0 0;
+    display: block;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s
+}
+
+.social-links a.vm {
+    background-position: 0 0
+}
+
+.social-links a.vm:hover {
+    background-position: -28px 0
+}
+
+.social-links a.fb {
+    background-position: 0 -30px
+}
+
+.social-links a.fb:hover {
+    background-position: -28px -30px
+}
+
+.social-links a.in {
+    background-position: 0 -60px
+}
+
+.social-links a.in:hover {
+    background-position: -28px -60px
+}
+
+.web-studio {
+    text-align: center;
+    color: #adadad;
+    font-size: 14px;
+    margin-top: 40px
+}
+
+.web-studio a {
+    color: #adadad;
+    border-bottom: 1px solid
+}
+
+.web-studio a:hover {
+    color: #f4a137
+}
+
+@media (max-width: 991px) {
+    .top-panel .tel {
+        margin-right: 40px;
+    }
+}

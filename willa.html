@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport">
+    <title>Revago | Аренда вилл в Испании</title>
+    <link rel="icon" type="image/ico" href="css/images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/first.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/willa.css">
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <style>
+    </style>
+    <!--[if lt IE 9]>
+    <script src="js/libs/html5shiv.min.js"></script>
+    <script src="js/libs/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/IE8.css">
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <style type="text/css">html,*{filter: none;}</style>
+    <!-->
+    <script src="js/libs/jquery-2.1.4.min.js"></script>
+    <!--<![endif]-->
+</head>
+<body>
+<header>
+  <a id="top"></a>
+  <div class="top-panel">
+    <div class="container">
+      <a class="logo" href="/">
+        <img src="css/images/logo.png" alt="" />
+        <p>Revago</p>
+        <span>Аренда вилл в Испании</span>
+      </a>
+      <div class="right-side">
+        <nav>
+          <ul>
+            <li><a href="#">О проекте</a></li>
+            <li><a href="#">Сдать виллу</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <a class="tel" href="tel:+74951001010">+7 (495) 100-10-10</a>
+        <button id="resp" aria-extended="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="helpers">
+        <div class="currency">
+          <span>€ EUR</span>
+          <ul>
+            <li class="active">€ EUR</li>
+            <li><i class="rubl"></i> RUB</li>
+          </ul>
+        </div>
+        <ul class="lang">
+          <li><a class="en" href="#"></a></li>
+          <li><a class="es" href="#"></a></li>
+          <!--<li><a class="ru" href="#"></a></li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="top-nav-fix">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="top-line">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-inline">
+                  <li><a href="#top">Наверх</a></li>
+                  <li><a href="#ab">Об этом жилье</a></li>
+                  <li><a href="#aniimated-thumbnials">Фотографии</a></li>
+                  <li><a href="#revie">Отзывы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.top-line -->
+      </div>
+    </div>
+  </div><!-- /.top-nav-fix -->
+</header>
+<main>
+  <div class="container">
+    <div class="row">
+      <!-- Primery content start -->
+      <div class="col-md-8">
+        <div class="title">
+        <i id="scrolll"></i>
+          <h2>Villa encanto</h2>
+          <div class="country">Андалусия, Испания</div>
+          <div class="rating">4.9<i class="fa fa-star"></i></div>
+          <div class="reviews"><a href="#link7">124 отзыва</a></div>
+        </div>
+        <div class="have">
+          <ul class="list-inline">
+            <li>
+              <img src="css/images/bed.png" alt="" class="img-responsive">
+              <div class="desc">Вилла</div>
+            </li>
+            <li>
+              <img src="css/images/twice_bed.png" height="45" width="45" alt="" class="img-responsive">
+              <div class="desc">7 гостейjj</div>
+            </li>
+            <li>
+              <img src="css/images/bathroom.png" height="45" width="45" alt="" class="img-responsive">
+              <div class="desc">5 спален</div>
+            </li>
+            <li>
+              <img src="css/images/bathroom.png" height="45" width="45" alt="" class="img-responsive">
+              <div class="desc">6 кроватей</div>
+            </li>
+            <li>
+              <img src="css/images/twice_bed.png" height="45" width="45" alt="" class="img-responsive">
+              <div class="desc">2 ванных комнаты</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Primery content bracke -->
+      <!-- Sidevar start -->
+      <div class="col-md-4">
+        <div class="wrapper-calc">
+          <div class="calc">
+            <div class="top-line">
+              <div class="price"><span>$350</span>за сутки</div>
+            </div>
+            <div class="datapicker">
+              <div class="come">
+                <span>Прибитие</span>
+                <input type="text" id="date-from" placeholder=" __ . __ . ____"/>
+              </div>
+              <div class="away">
+                <span>Выезд</span>
+                <input type="text" id="date-to" disabled placeholder=" __ . __ . ____"/>
+              </div>
+              <div class="count-people">
+                <div id="guests-wrapper">
+                  <span>Гостей</span>
+                  <select name="select" id="guest">
+                    <option value="1">1 гость</option>
+                    <option value="2">2 гостя</option>
+                    <option value="3">3 гостя</option>
+                    <option value="4">4 гостя</option>
+                    <option value="5">5 гостей</option>
+                    <option value="6">6 гостей</option>
+                    <option value="7">7 гостей</option>
+                    <option value="8">8 гостей</option>
+                    <option value="9">9 гостей</option>
+                    <option value="10">10 гостей</option>
+                    <option value="11">11 гостей</option>
+                    <option value="12">12 гостей</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="price-for">
+              <span id="price">$350</span> * <span id="days">0</span>суток <span id="pay"></span>
+            </div>
+            <div id="armor">
+              <button class="btn btn-default">Забронировать</button>
+              <p>Минимальный срок аренды: 7 дней</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+  <div class="wrapper-ab-home">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <section class="about-home">
+            <a id="ab"></a>
+            <h3>Об этом жилье</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ab eos eius laudantium sequi ipsum expedita ut minima iure provident. Blanditiis eius eos itaque culpa quaerat saepe ullam dicta tenetur.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, eaque ea ab assumenda quis voluptates, nisi deserunt asperiores doloribus dolorum recusandae quasi sed voluptatibus possimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatibus cumque necessitatibus aperiam quas,
+            </p>
+          </section><!-- /.about-home -->
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <section class="properties">
+            <div class="row">
+              <div class="col-xs-2">
+                <h4>Жильё</h4>
+              </div>
+              <div class="col-xs-10">
+                <ul class="lint-unstyled">
+                  <li>Тип размещения: <span>Вилла</span></li>
+                  <li>Количество спален:<span>5</span></li>
+                  <li>Количество ванных комнат:<span>1</span></li>
+                </ul>
+              </div>
+            </div>
+          </section><!-- /.properties -->
+          <section class="facilities">
+            <div class="row">
+              <div class="col-xs-2">
+                <h4>Удобства</h4>
+              </div>
+              <div class="col-xs-10">
+                <ul class="list-inline">
+                  <li>
+                    <img src="css/images/icons/kitchen.png" height="50" width="50" alt="" class="img-responsive">
+                    <div class="desc">Кухня</div>
+                  </li>
+                  <li>
+                    <img src="css/images/icons/wifi.png" height="50" width="50" alt="" class="img-responsive">
+                    <div class="desc">Беспроводной<br>интернет</div>
+                  </li>
+                  <li>
+                    <img src="css/images/icons/tellly.png" height="50" width="50" alt="" class="img-responsive">
+                    <div class="desc">Телевизор</div>
+                  </li>
+                  <li>
+                    <img src="css/images/icons/heating.png" height="50" width="50" alt="" class="img-responsive">
+                    <div class="desc">Отопление</div>
+                  </li>
+                  <div class="hid">
+                    <li>
+                      <img src="css/images/icons/toiletries.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Туалетные<br> принадлежности</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/conditioner.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Кондиционер</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/parking.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Парковка</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/inet.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Интернет</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/tv.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Кабельное телевидение</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/animal.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Можно с питомцами</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/family.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Подходит для детей/семей</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/events.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Подходит для проведения мероприятий</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/smoke.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Можно курить</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/invalid.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Полходит людям с ограниченными возможностями</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/lift.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Лифт</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/fireplace.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Камин</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/intercom.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Домофон</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/porter.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Вахтер</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/pool.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Бассейн</div>
+                    </li>
+                    <li>
+                      <img src="css/images/icons/gum.png" height="50" width="50" alt="" class="img-responsive">
+                      <div class="desc">Спортзал</div>
+                    </li>
+                  </div>
+                </ul>
+                <button class="btn-link more">Показать еще</button>
+              </div>
+            </div>
+          </section><!-- /.facilities -->
+          <section class="description-home">
+            <h4>Описание жилья</h4>
+            <p>Как правило, туристы связывают Валенсию (Valencia) с двумя распространенными ассоциациями: знаменитой одноименной футбольной командой и золотым побережьем Средиземного моря.</p>
+            <p>Оба варианта верны, но никто не ошибется, если к этому списку добавить любовь к вкусной еде, сиесте и уличным празднествам. Валенсия — это широкие чистые пляжи, апельсиновые рощи и аутентичные тихие деревушки испанских рыбаков.</p>
+            <p class="hid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam doloremque quis quo adipisci officia sit dolorum accusantium nihil aliquid. Accusamus quo voluptate repudiandae natus sed et quia, rem, dolorum.</p>
+            <button class="btn-link read-next">Читать далее</button>
+          </section><!-- /.description-home -->
+          <section class="direction photo" id="aniimated-thumbnials">
+            <div class="container">
+              <div class="two-block">
+                <div class="gal">
+                  <img src="css/images/core/city-1.jpg" alt="Аликанте" />
+                </div>
+                <div class="gal">
+                  <img src="css/images/core/city-2.jpg" alt="Аликанте" />
+                </div>
+              </div>
+              <div class="three-block">
+                <div class="gal">
+                  <img src="css/images/core/city-5.jpg" alt="Кастельон" />
+                </div>
+                <div class="gal mid">
+                  <img src="css/images/core/city-5.jpg" alt="Кастельон" />
+                </div>
+                <a href="css/images/core/city-5.jpg" class="screenerr">
+                  <img src="css/images/core/city-5.jpg" alt="Кастельон" />
+                  <span>Показать больше фото</span>
+                </a>
+              </div>
+               <div class="hid">
+                  <a href="css/images/core/city-5.jpg" class="screenerr">
+                    <img src="css/images/core/city-5.jpg" alt="Кастельон" />
+                  </a>
+                  <a href="css/images/core/city-5.jpg" class="screenerr" cxz>
+                    <img src="css/images/core/city-5.jpg" alt="Кастельон" />
+                  </a>
+                </div>
+            </div>
+            <a id="link7"></a>
+          </section><!-- /.direction -->
+          <section class="feedback">
+            <div class="topline">
+              <div class="row">
+                <div class="col-sm-2">
+                <a id="revie"></a>
+                  <h4>Отзыв</h4>
+                </div>
+                <div class="col-sm-10">
+                  <div class="rating">4.9<i class="fa fa-star"></i></div>
+                  <div class="reviews">124 отзыва</div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <ul class="list-inline">
+                        <li>
+                          <ul class="list-unstyled">
+                            <li>Lorem ipsum sdfsdfsdfds<span>4.9<i class="fa fa-star"></i></span></li>
+                            <li>Lorem ipsum sdfsdfsdfds<span>4.9<i class="fa fa-star"></i></span></li>
+                            <li>Lorem ipsum sdfsdfsdfds<span>4.9<i class="fa fa-star"></i></span></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <ul class="list-unstyled">
+                            <li>Lorem ipsum sdfsdfsdfds<span>4.9<i class="fa fa-star"></i></span></li>
+                            <li>Lorem ipsum sdfsdfsdfds<span>4.9<i class="fa fa-star"></i></span></li>
+                            <li>Lorem ipsum sdfsdfsdfds<span>4.9<i class="fa fa-star"></i></span></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- /.feedback -->
+          <section class="people-reviews">
+            <div class="case-record">
+              <div class="name">Elena</div>
+              <div class="rating">4.9<i class="fa fa-star"></i></div>
+              <div class="date">19 oct. 2015</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi doloremque architecto perferendis blanditiis perspiciatis fugit obcaecati ab nostrum. Incidunt nostrum ullam aut magni nulla facere, atque architecto quod sunt!
+              </p>
+              <p class="hid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui est, sit natus dolore perspiciatis distinctio delectus cupiditate nam sunt veritatis quia culpa maiores saepe magnam possimus iure, asperiores vero officiis.</p>
+              <button class="link read-next">Читать весь отзыв</button>
+            </div>
+            <div class="case-record">
+              <div class="name">Elena</div>
+              <div class="rating">4.9<i class="fa fa-star"></i></div>
+              <div class="date">19 oct. 2015</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi doloremque architecto perferendis blanditiis perspiciatis fugit obcaecati ab nostrum. Incidunt nostrum ullam aut magni nulla facere, atque architecto quod sunt!
+              </p>
+              <p class="hid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio nulla distinctio velit voluptatibus repellendus repellat id, voluptates quis praesentium autem rem ipsa quia saepe perspiciatis, quisquam nihil aspernatur iste ipsum!</p>
+              <button class="link reviews read-next"><span>Читать весь отзыв</span></button>
+            </div>
+          </section><!-- /.people-reviews -->
+          <section class="pager">
+            <ul class="pagination">
+              <li><a href="#" class="active">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </section><!-- /.pager -->
+          <button class="btn add-review pull-left">Оставить отзыв</button>
+        </div>
+      </div>
+    </div>
+    <!-- Feedback-people start -->
+    <section class="feedback-people">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" placeholder="Ваше имя">
+                <div class="links">
+                  <h5>Соответствие описаню</h5>
+                    <input type="hidden" class="rating"/>
+                </div>
+                <div class="links">
+                  <h5>Общение</h5>
+                    <input type="hidden" class="rating"/>
+                </div>
+                <div class="links">
+                  <h5>Чистота</h5>
+                    <input type="hidden" class="rating"/>
+                </div>
+                <div class="links">
+                  <h5>Расположение</h5>
+                    <input type="hidden" class="rating"/>
+                </div>
+                <div class="links">
+                  <h5>Заселение</h5>
+                    <input type="hidden" class="rating"/>
+                </div>
+                <div class="links">
+                  <h5>Цена/Качество</h5>
+                    <input type="hidden" class="rating"/>
+                </div>
+                <textarea name="comment" id="" cols="40" rows="7" placeholder="Ваш отзыв"></textarea>
+                  <img class="capcha" src="./css/images/capcha.png" alt="capcha"/>
+                  <button class="btn add-review feedbacking-in">Оставить отзыв</button>
+              </div>
+              <div class="col-md-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid">
+      <div class="row">
+        <div id="map"></div>
+      </div>
+    </div>
+    <section class="other-home">
+      <div class="container">
+        <div class="row">
+          <h4>Другие виллы и апартаменты</h4>
+          <ul class="bxslider">
+            <li>
+              <a href="#">
+                <img src="http://placehold.it/300x300" alt="">
+                <span class="botline">
+                  <span class="price">$260</span>
+                  <span class="review">124 отзыва</span>
+                  <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                </span>
+                <span class="name">Chalet</span>
+                <span class="desc">Уютная вилла с видом на море</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="http://placehold.it/300x300" alt="">
+                <span class="botline">
+                  <span class="price">$260</span>
+                  <span class="review">124 отзыва</span>
+                  <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                </span>
+                <span class="name">Chalet</span>
+                <span class="desc">Уютная вилла с видом на море</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="http://placehold.it/300x300" alt="">
+                <span class="botline">
+                  <span class="price">$260</span>
+                  <span class="review">124 отзыва</span>
+                  <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                  
+                </span>
+                <span class="name">Chalet</span>
+                <span class="desc">Уютная вилла с видом на море</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="http://placehold.it/300x300" alt="">
+                <span class="botline">
+                  <span class="price">$260</span>
+                  <span class="review">124 отзыва</span>
+                  <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                </span>
+                <span class="name">Chalet</span>
+                <span class="desc">Уютная вилла с видом на море</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="http://placehold.it/300x300" alt="">
+                <span class="botline">
+                  <span class="price">$260</span>
+                  <span class="review">124 отзыва</span>
+                  <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                </span>
+                <span class="name">Chalet</span>
+                <span class="desc">Уютная вилла с видом на море</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="http://placehold.it/300x300" alt="">
+                <span class="botline">
+                  <span class="price">$260</span>
+                  <span class="review">124 отзыва</span>
+                  <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                </span>
+                <span class="name">Chalet</span>
+                <span class="desc">Уютная вилла с видом на море</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="http://placehold.it/300x300" alt="">
+                <span class="botline">
+                  <span class="price">$260</span>
+                  <span class="review">124 отзыва</span>
+                  <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                </span>
+                <span class="name">Chalet</span>
+                <span class="desc">Уютная вилла с видом на море</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+        <div class="copyright">
+            <p>&copy; Revago 2015</p>
+            <p>Все права защищены</p>
+        </div>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="#">Правила поездки</a></li>
+                <li><a href="#">Календарь праздников</a></li>
+                <li><a href="#">Визовая поддержка</a></li>
+                <li><a href="#">Забронировать авиабилет</a></li>
+                <li><a href="#">Аренда автомобиля</a></li>
+            </ul>
+        </div>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="#">О проекте</a></li>
+                <li><a href="#">Как сдать виллу</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="social-links">
+                <li><a href="#" class="vm" target="_blank"></a></li>
+                <li><a href="#" class="fb" target="_blank"></a></li>
+                <li><a href="#" class="in" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div class="bottom-contacts">
+            <p><a class="phone" href="tel:+74951001010">+7 (495) 100-10-10</a></p>
+            <p><a class="mail" href="mailto:info@revago.ru">info@revago.ru</a></p>
+        </div>
+    </div>
+    <p class="web-studio">Сделано с любовью в веб-студии <a href="http://visario.ru/" target="_blank">Визарио</a></p>
+</footer>
+<!-- SCRIPTS -->
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-rating.js"></script>
+<script src="js/libs/datepicker-ru.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/lightgallery.js"></script>
+<script src="js/lg-thumbnail.js"></script>
+<script src="js/lg-fullscreen.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/libs/willa.js"></script>
+
+</body>
+</html>

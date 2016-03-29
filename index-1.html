@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport">
+    <title>Revago | Аренда вилл в Испании</title>
+    <link rel="icon" type="image/ico" href="css/images/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/first.css" type="text/css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <script src="js/libs/html5shiv.min.js"></script>
+    <script src="js/libs/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/IE8.css">
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <style type="text/css">html,*{filter: none;}</style>
+    <!-->
+    <script src="js/libs/jquery-2.1.4.min.js"></script>
+    <!--<![endif]-->
+</head>
+<body>
+<header>
+    <div class="top-panel">
+        <div class="container">
+            <a class="logo" href="/">
+                <img src="css/images/logo.png" alt="" />
+                <p>Revago</p>
+                <span>Аренда вилл в Испании</span>
+            </a>
+            <div class="right-side">
+                <nav>
+                    <ul>
+                        <li><a href="#">О проекте</a></li>
+                        <li><a href="#">Сдать виллу</a></li>
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a class="tel" href="tel:+74951001010">+7 (495) 100-10-10</a>
+                <button id="resp" aria-extended="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="helpers">
+                <div class="currency">
+                    <span>€ EUR</span>
+                    <ul>
+                        <li class="active">€ EUR</li>
+                        <li><i class="rubl"></i> RUB</li>
+                    </ul>
+                </div>
+                <ul class="lang">
+                    <li><a class="en" href="#"></a></li>
+                    <li><a class="es" href="#"></a></li>
+                    <!--<li><a class="ru" href="#"></a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-search">
+        <p>Аренда уютных вилл и апартаментов в Испании</p>
+        <form class="search-tab">
+            <div class="form-block col-2" id="place-wrapper">
+                <input type="text" placeholder="В какой город вы едете?" name="city" id="place" />
+            </div>
+            <div class="form-block col-1" id="date-from-wrapper">
+                <input type="text" placeholder="Прибытие"  name="date-from" id="date-from" />
+            </div>
+            <div class="form-block col-1" id="date-to-wrapper">
+                <input type="text" placeholder="Выезд" disabled name="date-to" id="date-to" />
+            </div>
+            <div class="form-block col-1" id="guests-wrapper" style="height: 200px">
+                <select name="guests" id="guests">
+                    <option value="1">1 гость</option>
+                    <option value="2">2 гостя</option>
+                    <option value="3">3 гостя</option>
+                    <option value="4">4 гостя</option>
+                    <option value="5">5 гостей</option>
+                    <option value="6">6 гостей</option>
+                    <option value="7">7 гостей</option>
+                    <option value="8">8 гостей</option>
+                    <option value="9">9 гостей</option>
+                    <option value="10">10 гостей</option>
+                    <option value="11">11 гостей</option>
+                    <option value="12">12 гостей</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Искать виллы</button>
+        </form>
+    </div>
+    <i class="scroll-tab"></i>
+</header>
+<section class="city">
+    <p class="small-title">Выберите город,<span>в который вы хотите отправиться</span></p>
+</section>
+<section class="direction">
+    <div class="container">
+        <div class="three-block">
+            <a href="#">
+                <img src="css/images/core/city-1.jpg" alt="Альбир" />
+                <span>Альбир</span>
+            </a>
+            <a href="#">
+                <img src="css/images/core/city-2.jpg" alt="Валенсия" />
+                <span>Валенсия</span>
+            </a>
+            <a href="#">
+                <img src="css/images/core/city-3.jpg" alt="Таррагона" />
+                <span>Таррагона</span>
+            </a>
+        </div>
+        <div class="two-block">
+            <a href="#">
+                <img src="css/images/core/city-4.jpg" alt="Аликанте" />
+                <span>Аликанте</span>
+            </a>
+            <a href="#">
+                <img src="css/images/core/city-5.jpg" alt="Кастельон" />
+                <span>Кастельон</span>
+            </a>
+        </div>
+        <div class="hidden-blocks">
+            <div class="two-block">
+                <a href="#">
+                    <img src="css/images/core/city-2.jpg" alt="Валенсия" />
+                    <span>Валенсия</span>
+                </a>
+                <a href="#">
+                    <img src="css/images/core/city-4.jpg" alt="Аликанте" />
+                    <span>Аликанте</span>
+                </a>
+            </div>
+            <div class="three-block">
+                <a href="#">
+                    <img src="css/images/core/city-3.jpg" alt="Таррагона" />
+                    <span>Таррагона</span>
+                </a>
+                <a href="#">
+                    <img src="css/images/core/city-5.jpg" alt="Кастельон" />
+                    <span>Кастельон</span>
+                </a>
+                <a href="#">
+                    <img src="css/images/core/city-1.jpg" alt="Альбир" />
+                    <span>Альбир</span>
+                </a>
+            </div>
+        </div>
+        <i class="btn show-direction">посмотрите все направления</i>
+    </div>
+</section>
+<section class="tourist">
+    <p class="small-title">Туристу<span>на заметку</span></p>
+</section>
+<section class="tourist-info">
+    <div class="container">
+        <div class="one-third">
+            <a href="#">
+                <img src="css/images/core/tourism-1.jpg" alt="Календарь праздников" />
+                <span>Календарь праздников</span>
+            </a>
+        </div>
+        <div class="two-third">
+            <div class="row">
+                <a href="#" class="large">
+                    <img src="css/images/core/tourism-2.jpg" alt="Правила поездки" />
+                    <span>Правила поездки</span>
+                </a>
+                <a href="#">
+                    <img src="css/images/core/tourism-3.jpg" alt="Визовая поддержка" />
+                    <span>Визовая поддержка</span>
+                </a>
+            </div>
+            <div class="row">
+                <a href="#">
+                    <img src="css/images/core/tourism-4.jpg" alt="Аренда автомобиля" />
+                    <span>Аренда автомобиля</span>
+                </a>
+                <a href="#" class="large">
+                    <img src="css/images/core/tourism-5.jpg" alt="Забронировать авиабилет" />
+                    <span>Забронировать авиабилет</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-project">
+    <div class="container">
+        <div class="project-wrapper">
+            <p class="title">О проекте</p>
+            <div class="project-info">
+                <p>Цель проекта — дать возможность путешественникам бронировать проверенные Виллы в Испании по цене собственника. <br/> В отличие от многих других проектов мы имеем авторизованных представителей в Испании и полностью гарантируем качественную аренду выбранной виллы.</p>
+                <p>Здесь же идёт ещё текст о проекте... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>
+                <div class="hidden">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor elit id molestie dictum. Nulla bibendum suscipit ante ac consequat. Maecenas sagittis odio dignissim magna sodales condimentum.</p>
+                    <p>Pellentesque a venenatis est. In felis leo, aliquam nec ultrices eget, ultricies et orci. Mauris vehicula non felis et volutpat. Vivamus at quam vitae sem congue bibendum. Phasellus eget sodales libero, nec rutrum sem.</p>
+                </div>
+                <p class="center"><i class="show-project">Подробнее о проекте</i></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="owner">
+    <div class="container">
+        <p class="title">Вы — собственник?</p>
+        <img src="css/images/bg/owner.jpg" alt="Villa" />
+        <p class="description">Узнайте, как можно заработать  на сдаче виллы или апартамента</p>
+        <a href="#" class="btn">Сдать виллу или апартамент</a>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>&copy; Revago 2015</p>
+            <p>Все права защищены</p>
+        </div>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="#">Правила поездки</a></li>
+                <li><a href="#">Календарь праздников</a></li>
+                <li><a href="#">Визовая поддержка</a></li>
+                <li><a href="#">Забронировать авиабилет</a></li>
+                <li><a href="#">Аренда автомобиля</a></li>
+            </ul>
+        </div>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="#">О проекте</a></li>
+                <li><a href="#">Как сдать виллу</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="social-links">
+                <li><a href="#" class="vm" target="_blank"></a></li>
+                <li><a href="#" class="fb" target="_blank"></a></li>
+                <li><a href="#" class="in" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div class="bottom-contacts">
+            <p><a class="phone" href="tel:+74951001010">+7 (495) 100-10-10</a></p>
+            <p><a class="mail" href="mailto:info@revago.ru">info@revago.ru</a></p>
+        </div>
+    </div>
+    <div class="copy-mobile">
+            <p>&copy; Revago 2015</p>
+            <p>Все права защищены</p>
+    </div>
+    <p class="web-studio">Сделано с любовью в веб-студии <a href="http://visario.ru/" target="_blank">Визарио</a></p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/datepicker-ru.js"></script>
+<script src="js/main.js"></script>
+<script src="js/lightgallery.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/cust-anm.js"></script>
+</body>
+</html>
