@@ -139,13 +139,13 @@ $(document).ready(function() {
     }
   });
   // animate button menu #resp
-  $(window).scroll(function(event) {
-    if ($(window).scrollTop() > 90) {
-      $('#resp').css({right: 0, top: 0});
-      $('.right-side nav').css('padding-top', '0').css('top', '-6px');
-    }else {
-      $('#resp').animate({right: 10, top: 18}, 200);
-      $('.right-side nav').css('padding-top', '39px').css('top', 'inherit');
-    }
-  });
+  // $(window).scroll(function(event) {
+  //   if ($(window).scrollTop() > 90) {
+  //     $('#resp').css({right: 0, top: 0});
+  //     $('.right-side nav').css('padding-top', '0').css('top', '-6px');
+  //   }else {
+  //     $('#resp').animate({right: 10, top: 18}, 200);
+  //     $('.right-side nav').css('padding-top', '39px').css('top', 'inherit');
+  //   }
+  // });
 });
