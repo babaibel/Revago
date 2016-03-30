@@ -72,7 +72,7 @@ $(document).ready(function () {
                                 period_is_correct = true;
                             diff = end.diff(_start, 'days');
                             if (diff < data.item.minimum_stay) {
-                                alert('ааИаНаИаМаАаЛбаНбаЙ аПаЕбаИаОаД аБбаОаНаИбаОаВаАаНаИб ' + data.item.minimum_stay_formatted)
+                                alert('����������� ������ ������������ ' + data.item.minimum_stay_formatted)
                                 return false;
                             }
                             for (var i = 1; i <= diff; i++) {
@@ -88,7 +88,7 @@ $(document).ready(function () {
                                     //+ ' ' + data.item.user_currency
                                 )
                             } else {
-                                alert('ааЕаВаОаЗаМаОаЖаНаО аЗаАаБбаОаНаИбаОаВаАбб аВбаБбаАаНаНбаЙ аПаЕбаИаОаД');
+                                alert('���������� ������������� ��������� ������');
                                 $('#days').html(0);
                                 $('#pay').html('');
                             }
