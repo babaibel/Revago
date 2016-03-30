@@ -72,7 +72,7 @@ $(document).ready(function () {
                                 period_is_correct = true;
                             diff = end.diff(_start, 'days');
                             if (diff < data.item.minimum_stay) {
-                                alert('Минимальный период бронирования ' + data.item.minimum_stay_formatted)
+                                alert('РњРёРЅРёРјР°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ Р±СЂРѕРЅРёСЂРѕРІР°РЅРёСЏ ' + data.item.minimum_stay_formatted)
                                 return false;
                             }
                             for (var i = 1; i <= diff; i++) {
@@ -88,7 +88,7 @@ $(document).ready(function () {
                                     //+ ' ' + data.item.user_currency
                                 )
                             } else {
-                                alert('Невозможно забронировать выбранный период');
+                                alert('РќРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ РІС‹Р±СЂР°РЅРЅС‹Р№ РїРµСЂРёРѕРґ');
                                 $('#days').html(0);
                                 $('#pay').html('');
                             }
