@@ -221,7 +221,7 @@
   color: #9b9b9b!important;
 }
 
-.booking-modal__form input[type="text"]::-webkit-placeholder{
+.booking-modal__form input[type="text"]::-webkit-input-placeholder{
   color: #9b9b9b!important;
 }
 
