@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="css/first.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/willa.css">
+
+    <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
     <style>
     </style>
@@ -167,7 +171,7 @@
               <span id="price">$350</span> * <span id="days">0</span>суток <span id="pay"></span>
             </div>
             <div id="armor">
-              <button class="btn btn-default">Забронировать</button>
+              <a href="#booking-modal" class="btn btn-default popup-modal">Забронировать</a>
               <p>Минимальный срок аренды: 7 дней</p>
             </div>
           </div>
@@ -589,6 +593,44 @@
     </div>
     <p class="web-studio">Сделано с любовью в веб-студии <a href="http://visario.ru/" target="_blank">Визарио</a></p>
 </footer>
+
+<div id="booking-modal" class="white-popup-block mfp-hide">
+  <div class="header-modal">
+    <h2>ОНЛАЙН БРОНИРОВАНИЕ</h2>
+  </div>
+  <div class="booking-modal__topline">
+    <h3 class="h3-title">VILLA ENCANTO</h3>
+    <h4 class="h4-subtitle">Calle Ancha, Херес-де-ла-Фронтера, Andalucía 11404, Испания</h4>
+  </div>
+  <div class="booking-modal__info">
+    <p><strong>Duplex located in downtown area</strong></p>
+    <p><strong>Гостей:</strong> 2</p>
+    <p><strong>Период пребывания:</strong> с 12.03.2016 по 16.03.2016</p>
+    <p><strong>Ночей:</strong> 4</p>
+
+    <div class="booking-modal__total">
+      Итого к оплате € 1050
+    </div>
+  </div>
+  <div class="booking-modal__form">
+    <div class="booking-modal__form-wrapper">
+      <form>
+        <input type="text" placeholder="Имя">
+        <input type="text" placeholder="Фамилия">
+        <input type="text" placeholder="Страна">
+        <input type="text" placeholder="Город">
+
+        <input type="text" placeholder="Адрес">
+        <input type="text" placeholder="Индекс">
+        <input type="text" placeholder="Телефон">
+        <input type="text" placeholder="E-mail">
+
+        <button class="btn btn-default">Забронировать</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <!-- SCRIPTS -->
 <script src="js/libs/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -600,6 +642,9 @@
 <script src="js/lg-fullscreen.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/libs/willa.js"></script>
+<!-- NEW SCRIPTS -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/new.js"></script>
 
 </body>
 </html>
