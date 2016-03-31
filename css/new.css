@@ -228,8 +228,6 @@
   margin: 0 3% 17px 0;
 }
 
-
-
 .booking-modal__form input[type="text"]::-moz-placeholder{
   color: #9b9b9b!important;
 }
@@ -437,6 +435,22 @@
 .search-tab .col-2 {
   margin: 0 1%!important;
   width: 31.3333%!important;
+}
+
+.search-tab textarea{
+  background: #9b9b9b;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  font: 400 16px/18px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
+  height: 50px;
+  padding: 15px 20px;
+  width: 100%;
+  resize: none;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 @media all and (max-width: 1350px){
