@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport">
+    <title>Revago | Направления</title>
+    <link rel="icon" type="image/ico" href="css/images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/first.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/direction.css">
+    <link rel="stylesheet" href="css/new.css">
+    <!--[if lt IE 9]>
+    <script src="js/libs/html5shiv.min.js"></script>
+    <script src="js/libs/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/IE8.css">
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <style type="text/css">html,*{filter: none;}</style>
+    <!-->
+    <script src="js/libs/jquery-2.1.4.min.js"></script>
+    <!--<![endif]-->
+</head>
+<body class="page-direction">
+<header>
+    <div class="top-panel">
+        <div class="container">
+            <a class="logo" href="/">
+                <img src="css/images/logo.png" alt=""/>
+
+                <p>Revago</p>
+                <span>Аренда вилл в Испании</span>
+            </a>
+
+            <div class="right-side">
+                <nav>
+                    <ul>
+                        <li><a href="#">О проекте</a></li>
+                        <li><a href="#">Сдать виллу</a></li>
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a class="tel" href="tel:+74951001010">+7 (495) 100-10-10</a>
+                <button id="resp" aria-extended="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="helpers">
+                <div class="currency">
+                    <span>€ EUR</span>
+                    <ul>
+                        <li class="active">€ EUR</li>
+                        <li><i class="rubl"></i> RUB</li>
+                    </ul>
+                </div>
+                <ul class="lang">
+                    <li><a class="en" href="#"></a></li>
+                    <li><a class="es" href="#"></a></li>
+                    <!--<li><a class="ru" href="#"></a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center"><h1>Валенсия</h1></div>
+    </div>
+</header>
+<!-- Directions -->
+<section class="search-form search-form--extended">
+    <div class="container">
+        <form class="search-tab">
+            <div class="form-block">
+                <div class="form-block__title">
+                    Место
+                </div>
+                <div class="form-block__input-wrap">
+                    <input type="text" placeholder="В какой город вы едете?" name="city" id="place"/>
+                </div>
+            </div>
+            <div class="form-block">
+                <div class="form-block--date">
+                    <div class="form-block__title">Дата</div>
+                    <div class="form-block__input-wrap">
+                        <input type="text" placeholder="Прибытие" name="date-from" id="date-from"/>
+                        <div class="form-block__subtitle">до</div>
+                        <input type="text" placeholder="Выезд" disabled name="date-to" id="date-to"/>
+                    </div>
+                </div>
+                <div class="form-block--guests-wrapper">
+                    <div class="form-block__title">Кол-во гостей:</div>
+                    <div class="form-block__input-wrap">
+                        <div id="guests-wrapper">
+                            <select name="guests" id="guests">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>  
+                    </div>
+                </div>
+                <div class="form-block--placement-type">
+                    <div class="form-block__title"><span>Тип размещения:</span></div>
+                    <div class="form-block__input-wrap">
+                        <div class="placement-type active" id="placement-type1"><img src="css/images/icons/apartment.png" alt="">Апартамент</div>
+                        <div class="placement-type" id="placement-type2"><img src="css/images/icons/willa.png" alt="">Вилла</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-block">
+                <div class="form-block--date">
+                    <div class="form-block__title">Цена:</div>
+                    <div class="form-block__input-wrap">
+                        <input type="text" placeholder="1500 €" name="price-from" id="price-from"/>
+                        <div class="form-block__subtitle">до</div>
+                        <input type="text" placeholder="2500 €" name="price-to" id="price-to"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-block">
+                <button type="submit" class="btn">ОБНОВИТЬ РЕЗУЛЬТАТЫ</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="other-apartments">
+    <div class="container">
+        <p class="small-title">Найдено 78 вилл и аппартаментов</p>
+        <ul id="main-apartments">
+            <li class="col-sm-6 col-xs-12">
+                <div class="images">
+                    <div id="inner-slider-1" class="carousel slide" data-ride="carousel" data-interval="false" data-interval="false">
+                        <!-- Wrapper for slides -->
+                        <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                            <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#inner-slider-1" role="button" data-slide="prev">
+                            <i class="fa fa-chevron-left fa-lg"></i>
+                        </a>
+                        <a class="right carousel-control" href="#inner-slider-1" role="button" data-slide="next">
+                            <i class="fa fa-chevron-right fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="description">
+                    <a href="#"><h3>Аппартамент Townhouse</h3></a>
+
+                    <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                </div>
+            </li>
+            <li class="col-sm-6 col-xs-12">
+                <div class="images">
+                    <div id="inner-slider-2" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <!-- Wrapper for slides -->
+                        <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                            <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#inner-slider-2" role="button" data-slide="prev">
+                            <i class="fa fa-chevron-left fa-lg"></i>
+                        </a>
+                        <a class="right carousel-control" href="#inner-slider-2" role="button" data-slide="next">
+                            <i class="fa fa-chevron-right fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="description">
+                    <a href="#"><h3>Аппартамент Townhouse</h3></a>
+
+                    <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                </div>
+            </li>
+            <li class="col-sm-6 col-xs-12">
+                <div class="images">
+                    <div id="inner-slider-3" class="carousel slide" data-ride="carousel3">
+                        <!-- Wrapper for slides -->
+                        <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                            <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#inner-slider-3" role="button" data-slide="prev">
+                            <i class="fa fa-chevron-left fa-lg"></i>
+                        </a>
+                        <a class="right carousel-control" href="#inner-slider-3" role="button" data-slide="next">
+                            <i class="fa fa-chevron-right fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="description">
+                    <a href="#"><h3>Аппартамент Townhouse</h3></a>
+
+                    <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                </div>
+            </li>
+            <li class="col-sm-6 col-xs-12">
+              <a href="#">
+                <div class="images">
+                  <div id="inner-slider-4" class="carousel slide" data-ride="carousel4">
+                    <!-- Wrapper for slides -->
+                    <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                      <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#inner-slider-4" role="button" data-slide="prev">
+                      <i class="fa fa-chevron-left fa-lg"></i>
+                    </a>
+                    <a class="right carousel-control" href="#inner-slider-4" role="button" data-slide="next">
+                      <i class="fa fa-chevron-right fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="description">
+                  <a href="#"><h3>Аппартамент Townhouse</h3></a>
+
+                  <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                </div>
+              </a>
+            </li>
+            <li class="col-sm-6 col-xs-12">
+              <a href="#">
+                <div class="images">
+                  <div id="inner-slider-5" class="carousel slide" data-ride="carousel5">
+                    <!-- Wrapper for slides -->
+                    <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                      <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#inner-slider-5" role="button" data-slide="prev">
+                      <i class="fa fa-chevron-left fa-lg"></i>
+                    </a>
+                    <a class="right carousel-control" href="#inner-slider-5" role="button" data-slide="next">
+                      <i class="fa fa-chevron-right fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="description">
+                  <a href="#"><h3>Аппартамент Townhouse</h3></a>
+
+                  <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                </div>
+              </a>
+            </li>
+            <li class="col-sm-6 col-xs-12">
+              <a href="#">
+                <div class="images">
+                  <div id="inner-slider-6" class="carousel slide" data-ride="carousel6">
+                    <!-- Wrapper for slides -->
+                    <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                      <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#inner-slider-6" role="button" data-slide="prev">
+                      <i class="fa fa-chevron-left fa-lg"></i>
+                    </a>
+                    <a class="right carousel-control" href="#inner-slider-6" role="button" data-slide="next">
+                      <i class="fa fa-chevron-right fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="description">
+                  <a href="#"><h3>Аппартамент Townhouse</h3></a>
+
+                  <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                </div>
+              </a>
+            </li>
+            <li class="col-sm-6 col-xs-12">
+                <div class="images">
+                  <div id="inner-slider-7" class="carousel slide" data-ride="carousel7">
+                    <!-- Wrapper for slides -->
+                    <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                      <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#inner-slider-7" role="button" data-slide="prev">
+                      <i class="fa fa-chevron-left fa-lg"></i>
+                    </a>
+                    <a class="right carousel-control" href="#inner-slider-7" role="button" data-slide="next">
+                      <i class="fa fa-chevron-right fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="description">
+                  <a href="#"><h3>Аппартамент Townhouse</h3></a>
+
+                  <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                </div>
+            </li>
+            <li class="col-sm-6 col-xs-12">
+              <a href="#">
+                <div class="images">
+                  <div id="inner-slider-8" class="carousel slide" data-ride="carousel8">
+                    <!-- Wrapper for slides -->
+                    <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                      <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#inner-slider-8" role="button" data-slide="prev">
+                      <i class="fa fa-chevron-left fa-lg"></i>
+                    </a>
+                    <a class="right carousel-control" href="#inner-slider-8" role="button" data-slide="next">
+                      <i class="fa fa-chevron-right fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="description">
+                  <a href="#"><h3>Аппартамент Townhouse</h3></a>
+
+                  <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                </div>
+              </a>
+            </li>
+            
+            
+            
+      
+            <div id="hid" class="collapse">
+                <li class="col-sm-6 col-xs-12">
+                  <a href="#">
+                    <div class="images">
+                      <div id="inner-slider-9" class="carousel slide" data-ride="carousel9">
+                        <!-- Wrapper for slides -->
+                        <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                          <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#inner-slider-9" role="button" data-slide="prev">
+                          <i class="fa fa-chevron-left fa-lg"></i>
+                        </a>
+                        <a class="right carousel-control" href="#inner-slider-9" role="button" data-slide="next">
+                          <i class="fa fa-chevron-right fa-lg"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <a href="#"><h3>Аппартамент Townhouse</h3></a>
+                      <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="col-sm-6 col-xs-12">
+                  <a href="#">
+                    <div class="images">
+                      <div id="inner-slider-10" class="carousel slide" data-ride="carousel10">
+                        <!-- Wrapper for slides -->
+                        <a href="#">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Chania">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                                <div class="item">
+                                    <img src="css/images/img-apart.jpg" alt="Flower">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="carousel-caption botline">
+                            <span class="price">€ 260</span>
+                            <span class="review"><a href='#'>124 отзыва</a></span>
+                          <span class="reit">4.0 <i class="fa fa-star"></i></span>
+                        </div>
+                        <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#inner-slider-10" role="button" data-slide="prev">
+                      <i class="fa fa-chevron-left fa-lg"></i>
+                    </a>
+                    <a class="right carousel-control" href="#inner-slider-10" role="button" data-slide="next">
+                      <i class="fa fa-chevron-right fa-lg"></i>
+                    </a>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <a href="#"><h3>Аппартамент Townhouse</h3></a>
+                      <p>Эксклюзивное жилье в самом сердце Валенсии</p>
+                    </div>
+                  </a>
+                </li>
+            </div>
+        </ul>
+        <p class="text-center read-next"><a href="#hidden-aparts" data-toggle="collapse" class="btn show-direction">
+           <i class="fa fa-chevron-down fa-lg"></i> Показать
+            больше вариантов</a></p>
+    </div>
+</section>
+<section class="tourist-info">
+    <p class="small-title">Другие направления</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="one-third">
+                <a href="#">
+                    <img src="css/images/core/tourism-1.jpg" alt="Календарь праздников"/>
+                    <span>Альбир</span>
+                </a>
+            </div>
+            <div class="two-third">
+                <div class="row">
+                    <a href="#" class="large">
+                        <img src="css/images/core/tourism-2.jpg" alt="Правила поездки"/>
+                        <span>Валенсия</span>
+                    </a>
+                    <a href="#">
+                        <img src="css/images/core/tourism-3.jpg" alt="Визовая поддержка"/>
+                        <span>Таррагона</span>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="#">
+                        <img src="css/images/core/tourism-4.jpg" alt="Аренда автомобиля"/>
+                        <span>Кастельон</span>
+                    </a>
+                    <a href="#" class="large">
+                        <img src="css/images/core/tourism-5.jpg" alt="Забронировать авиабилет"/>
+                        <span>Аликанте</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>&copy; Revago 2015</p>
+
+            <p>Все права защищены</p>
+        </div>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="#">Правила поездки</a></li>
+                <li><a href="#">Календарь праздников</a></li>
+                <li><a href="#">Визовая поддержка</a></li>
+                <li><a href="#">Забронировать авиабилет</a></li>
+                <li><a href="#">Аренда автомобиля</a></li>
+            </ul>
+        </div>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="#">О проекте</a></li>
+                <li><a href="#">Как сдать виллу</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="social-links">
+                <li><a href="#" class="vm" target="_blank"></a></li>
+                <li><a href="#" class="fb" target="_blank"></a></li>
+                <li><a href="#" class="in" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div class="bottom-contacts">
+            <p><a class="phone" href="tel:+74951001010">+7 (495) 100-10-10</a></p>
+
+            <p><a class="mail" href="mailto:info@revago.ru">info@revago.ru</a></p>
+        </div>
+    </div>
+    <p class="web-studio">Сделано с любовью в веб-студии <a href="http://visario.ru/" target="_blank">Визарио</a></p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/datepicker-ru.js"></script>
+<script src="js/lightgallery.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/direction.js"></script>
+<script src="js/new.js"></script>
+</body>
+</html>

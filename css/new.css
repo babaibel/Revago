@@ -432,7 +432,7 @@
   right: 0;
 }
 
-.search-tab .col-2 {
+.about-project .search-tab .col-2 {
   margin: 0 1%!important;
   width: 31.3333%!important;
 }
@@ -453,6 +453,123 @@
   transition: all 0.5s ease-in-out 0s;
 }
 
+.page-direction .search-form--extended {
+    background: #efefef none repeat scroll 0 0;
+    padding: 25px;
+    margin: 0 0 20px;
+}
+
+.page-direction .search-form--extended .search-tab{
+  margin: 0;
+}
+
+.other-apartments .small-title{
+  color: #000;
+  font-size: 36px;
+  padding-bottom: 35px;
+  padding-top: 20px;
+}
+
+.search-form--extended .form-block{
+
+}
+
+.search-form--extended .form-block:after,
+.search-form--extended .form-block .form-block__input-wrap:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.search-form--extended .form-block .form-block__title{
+  display: block;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  min-width: 70px;
+  color: #000;
+  margin: 0 0 15px;
+}
+
+.search-form--extended .form-block .form-block__input-wrap{
+  padding-left: 70px;
+}
+
+.search-form--extended .form-block__subtitle{
+  display: block;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  min-width: 50px;
+  color: #5e5e5e;
+  text-align: center;
+}
+
+.form-block--date{
+  width: 370px;
+  float: left;
+  margin-right: 25px!important;
+}
+
+.form-block--date input{
+  width: 125px;
+  float: left;
+}
+
+.form-block--guests-wrapper .form-block__input-wrap{
+  padding-left: 130px!important;
+}
+
+.form-block--guests-wrapper{
+  width: 230px;
+  float: left;
+  margin-right: 25px!important;
+}
+
+.search-form--extended .btn{
+  float: none;
+  margin-left: 70px;
+  width: 300px!important;
+  display: block;
+}
+
+.form-block--placement-type{
+  float: left;
+}
+.form-block--placement-type .form-block__input-wrap {
+    padding-left: 150px!important;
+}
+
+.placement-type{
+  display: block;
+  float: left;
+  cursor: pointer;
+  height: 50px;
+  background: #9ea1a1;
+  border: 1px solid #9ea1a1;
+  padding: 0 20px;
+  color: #fff;
+  margin-right: 10px;
+  font: 400 16px/50px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.placement-type:last-child{
+  margin: 0;
+}
+
+.placement-type img{
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto!important;
+  margin: -6px 10px 0 0;
+}
+
+.placement-type.active{
+  color: #5e5e5e;
+  background: #fff;
+}
+
 @media all and (max-width: 1350px){
   .event-calendar__event{
     position: absolute;
@@ -466,6 +583,16 @@
   .event-calendar__event:after{
     left: 10px;
     margin: 0;
+  }
+}
+
+@media all and (max-width: 1200px){
+  .search-form--extended .form-block .form-block__input-wrap{
+    max-width: 625px;
+  }
+
+  .form-block--placement-type{
+    width: 100%
   }
 }
 
@@ -498,6 +625,8 @@
   .holiday-item .show-more{
     margin: 10px 0 0;
   }
+
+  
 }
 
 @media all and (max-width: 767px){
@@ -576,6 +705,90 @@
     margin-left: -8px;
   }
 
+  .form-block--guests-wrapper{
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .page-direction .search-form--extended{
+    padding: 25px 10px;
+  }
+
+  .search-form--extended .form-block .form-block__input-wrap{
+    max-width: 450px;
+  }
+
+  .form-block__input-wrap #guests-wrapper,
+  .form-block__input-wrap #guests-wrapper #guests-button{
+    width: 100%!important;
+  }
+
+  .form-block--date{
+    width: 450px;
+    margin-right: 0!important;
+  }
+
+  .search-form--extended .btn{
+    width: 380px!important;
+  }
+
+  .form-block--date input{
+    width: 165px;
+  }
+
+  .other-apartments .small-title{
+    font-size: 30px;
+    line-height: 1.3;
+  }
+}
+@media all and (max-width: 560px){
+.search-form--extended .form-block .form-block__title {
+    float: none;
+    height: auto;
+    line-height: 18px;
+    margin: 0 0 10px;
+    min-width: auto;
+  }
+  .search-form--extended .form-block .form-block__input-wrap {
+    padding-left: 0!important;
+    margin: 0 0 15px!important;
+  }
+
+  .search-form--extended .btn{
+    margin-left: 0;
+  }
+
+  .form-block--date{
+    width: 100%;
+  }
+
+  .form-block--date input{
+    width: 125px;
+  }
+
+  .page-direction .search-form--extended{
+    padding: 25px 0;
+  }
+
+  .page-direction .search-form--extended .search-tab{
+    max-width: 290px;
+  }
+
+  .search-form--extended .btn{
+    width: 100%!important;
+  }
+
+  .form-block--date input{
+    width: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .form-block__input-wrap .placement-type{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 @media all and (max-width: 479px){
