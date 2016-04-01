@@ -78,7 +78,7 @@
                 <div class="form-block__title">
                     Место
                 </div>
-                <div class="form-block__input-wrap">
+                <div class="form-block__input-wrap" id="place-wrapper">
                     <input type="text" placeholder="В какой город вы едете?" name="city" id="place"/>
                 </div>
             </div>
@@ -86,9 +86,13 @@
                 <div class="form-block--date">
                     <div class="form-block__title">Дата</div>
                     <div class="form-block__input-wrap">
-                        <input type="text" placeholder="Прибытие" name="date-from" id="date-from"/>
+                        <div id="date-from-wrapper">
+                            <input type="text" placeholder="Прибытие" name="date-from" id="date-from"/>
+                        </div>
                         <div class="form-block__subtitle">до</div>
-                        <input type="text" placeholder="Выезд" disabled name="date-to" id="date-to"/>
+                        <div id="date-to-wrapper">
+                            <input type="text" placeholder="Выезд" disabled name="date-to" id="date-to"/>
+                        </div>
                     </div>
                 </div>
                 <div class="form-block--guests-wrapper">
