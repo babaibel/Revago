@@ -573,7 +573,7 @@
   background: #fff;
 }
 
-.page-direction #main-apartments li:nth-child(even){
+.page-direction #main-apartments li:nth-child(2n+1){
   clear: left;
 }
 
