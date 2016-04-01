@@ -574,7 +574,7 @@
 }
 
 .page-direction #main-apartments li:nth-child(2n){
-    clear: left;
+  clear: left;
 }
 
 @media all and (max-width: 1350px){
