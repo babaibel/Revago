@@ -511,7 +511,10 @@
   margin-right: 25px!important;
 }
 
-.form-block--date input{
+.form-block--date #date-from-wrapper,
+.form-block--date #date-to-wrapper,
+.form-block--date #price-from,
+.form-block--date #price-to{
   width: 125px;
   float: left;
 }
@@ -568,6 +571,10 @@
 .placement-type.active{
   color: #5e5e5e;
   background: #fff;
+}
+
+.page-direction #main-apartments li:nth-child(2n){
+    clear: left;
 }
 
 @media all and (max-width: 1350px){
@@ -732,7 +739,10 @@
     width: 380px!important;
   }
 
-  .form-block--date input{
+  .form-block--date #date-from-wrapper,
+  .form-block--date #date-to-wrapper,
+  .form-block--date #price-from,
+  .form-block--date #price-to{
     width: 165px;
   }
 
@@ -762,10 +772,6 @@
     width: 100%;
   }
 
-  .form-block--date input{
-    width: 125px;
-  }
-
   .page-direction .search-form--extended{
     padding: 25px 0;
   }
@@ -778,10 +784,12 @@
     width: 100%!important;
   }
 
-  .form-block--date input{
+  .form-block--date #date-from-wrapper,
+  .form-block--date #date-to-wrapper,
+  .form-block--date #price-from,
+  .form-block--date #price-to{
     width: 120px;
-    padding-left: 10px;
-    padding-right: 10px;
+
   }
 
   .form-block__input-wrap .placement-type{
