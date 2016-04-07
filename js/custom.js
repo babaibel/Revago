@@ -9,7 +9,7 @@ $(document).ready(function  () {
     }
   });
   $('#aniimated-thumbnials').lightGallery({
-      selector: '.screenerr',
+      selector: '.screenerr'
     });
   $('.bxslider').bxSlider({
     maxSlides: 3,

@@ -49,6 +49,10 @@
   width: 33.3333%;
 }
 
+.holiday-gallery__image:nth-child(3n+1){
+  clear: left;
+}
+
 .holiday-gallery__image img{
   display: block;
   width: 100%;
