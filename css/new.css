@@ -91,7 +91,6 @@
   font-family: Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
   font-size: 26px;
   margin: 0 0 10px;
-  
 }
 
 .holiday-item__title a{
@@ -432,10 +431,10 @@
   right: 0;
 }
 
-.about-project .search-tab .col-2 {
+/* .about-project .search-tab .col-2 {
   margin: 0 1%!important;
   width: 31.3333%!important;
-}
+} */
 
 .search-tab textarea{
   background: #9b9b9b;
@@ -443,7 +442,7 @@
   box-sizing: border-box;
   color: #fff;
   font: 400 16px/18px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
-  height: 50px;
+  height: 230px;
   padding: 15px 20px;
   width: 100%;
   resize: none;
@@ -451,6 +450,7 @@
   -moz-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
+  margin: 0 0 20px;
 }
 
 .page-direction .search-form--extended {
@@ -575,6 +575,92 @@
 
 .page-direction #main-apartments li:nth-child(2n+1){
   clear: left;
+}
+
+.search-tab input.error{
+  border: 2px solid #f00;
+}
+.search-tab input.error:focus{
+  border-color: #9e9e9f!important;
+}
+
+.inner-page__small-title {
+  color: #333;
+  font: 100 56px/56px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif!important;
+  text-align: center!important;
+}
+
+#aniimated-thumbnials .direction .two-block .gal {
+  display: block;
+  float: left;
+  height: 265px;
+  margin: 0 2% 2% 0;
+  width: 49%;
+}
+
+#aniimated-thumbnials .direction .three-block .gal{
+  overflow: hidden;
+}
+
+#aniimated-thumbnials .direction .three-block img{
+  max-width: none;
+}
+
+#aniimated-thumbnials .direction .two-block .gal:last-child{
+  margin-right: 0;
+}
+
+header.inner-page__header{
+  height: 309px!important;
+  min-height: auto!important;
+}
+
+header.inner-page__header h1{
+  margin-top: 90px!important;
+}
+
+header.inner-page__header h1.h1-and-subtitle {
+  margin: 70px 0 15px !important;
+}
+
+.wrapper-calc .price-for #days, .wrapper-calc .price-for #price {
+  padding: 0 8px;
+}
+
+.wrapper-calc .price-for #pay {
+  padding-right: 0;
+}
+
+.contact-form .container{
+  padding: 0!important;
+}
+
+.contact-form .search-tab {
+  margin: 0!important;
+}
+
+.contact-form .search-tab .btn{
+  width: 100%!important;
+  max-width: none!important;
+}
+
+.contact-form .search-tab .col-2 {
+  margin: 0 0 20px;
+  padding: 0 10px;
+  width: 50% !important;
+}
+
+.contact-form .search-tab .form-block__row{
+  margin: 0 -10px;
+}
+
+.about-project .contact-form{
+  width: 50%;
+  margin: 30px 0;
+}
+
+.about-project .contact-form .search-tab input {
+    background: #9b9b9b;
 }
 
 @media all and (max-width: 1350px){
@@ -884,8 +970,4 @@
     max-width: 100%;
     width: auto;
   }
-}
-
-.page-direction header h1{
-  margin-top: 90px;
 }

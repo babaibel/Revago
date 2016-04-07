@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>      </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport">
+            
+    <link rel="icon" type="image/ico" href="css/images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/first.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/direction.css">
+    <link rel="stylesheet" href="css/new.css">
+    <!--[if lt IE 9]>
+    <script src="/js/libs/html5shiv.min.js"></script>
+    <script src="/js/libs/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/IE8.css">
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <style type="text/css">html,*{filter: none;}</style>
+    <!-->
+    <script src="/js/libs/jquery-2.1.4.min.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="page-direction">
+<header class="inner-page__header">
+    <div class="top-panel">
+        <div class="container">
+            <a class="logo" href="/ru">
+                <img src="/css/images/logo.png" alt=""/>
+
+                <p>Revago</p>
+                <span>Аренда вилл в Испании</span>
+            </a>
+
+            <div class="right-side">
+                <nav>
+    <ul>
+                        <li>
+            <a href="http://revago.sotape.com/about.html">
+                О проекте            </a></li>
+                        <li>
+            <a href="http://revago.sotape.com/become-a-host.html">
+                Сдать виллу            </a></li>
+                        <li>
+            <a href="http://revago.sotape.com/help.html">
+                Помощь            </a></li>
+                        <li>
+            <a href="http://revago.sotape.com/contacts">
+                Контакты            </a></li>
+            </ul>
+</nav>                <a class="tel" href="tel:+79689357669">+7 (968) 935-76-69</a>                <button id="resp" aria-extended="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="helpers">
+    <div class="currency">
+                    <span>
+                        <i class="rubl"></i> RUB                    </span>
+        <ul>
+            <li                 data-set="eur">€ EUR
+            </li>
+            <li class="active"                data-set="rub"><i class="rubl"></i> RUB
+            </li>
+        </ul>
+    </div>
+    <ul class="lang">
+                <li><a class="en" href="/en/contact.html"></a></li>
+                        <li><a class="es" href="/es/contact.html"></a></li>
+                    </ul>
+</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center">
+                        <h1> Контакты </h1>
+                    </div>
+    </div>
+</header>
+<!-- Directions -->
+
+<section class="about-project">
+    <div class="container">
+        <div class="project-wrapper" style="background: #FFFFFF;
+        line-height: 30px;
+    letter-spacing: -.1px;
+        font-family:Avenir, Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:18px; padding-top:50px">
+                <p>Мы находимся по адресу: г. Москва, ул. Муравская 18/3.<br />Телефон для связи: +7 (968) 935-76-69<br />E-mail для связи: hello (at) revago.ru</p>
+    <p><h3>Форма обратной связи</h3>
+
+    <section class="contact-form">
+        <div class="container">
+            <form class="search-tab" method="post" action="http://revago.sotape.com/form/contact" name="contact">
+                <div class="form-block__row cleara">
+                    <div class="form-block col-2" id="place-wrapper">
+                        <input class="error" type="text" placeholder="Ваше имя" name="name"/>
+                    </div>
+                    <div class="form-block col-2" id="place-wrapper">
+                        <input type="text" placeholder="Ваш e-mail" name="email"/>
+                    </div>
+                </div>
+                <div class="form-block" id="place-wrapper">
+                    <textarea placeholder="Ваше сообщение" name="messages"></textarea>
+                </div>
+
+                <div style="text-align: center;">
+
+                    <button type="submit" class="btn">Отправить</button>
+                </div>
+                <input type="hidden" name="form" value="contact">
+            </form>
+        </div>
+    </section>
+
+<link rel="stylesheet" href="/css/magnific-popup.css">
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript">
+
+    $('form[name="contact"]').submit(function () {
+        $.ajax({
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            type: 'POST',
+            dataType: 'json',
+            success: function (data) {
+                if (data.success) {
+                    window.location.href = '/form/result'
+                }
+            },
+            error: function (th, state, message) {
+                var messages = [];
+                $('a[data-action="reload-captcha"]').click();
+                $.each(th.responseJSON, function (idx, record) {
+                    messages.push(record.join('<br />'));
+                })
+                var div = $('<div class="error alert-popup">' + messages.join('<br />') + '</div>');
+                $.magnificPopup.open({
+                    items: {
+                        src: div,
+                        type: 'inline'
+                    }
+                });
+            }
+        })
+        return false;
+    })
+</script>
+
+</p>
+
+        </div>
+        <style>
+            .project-wrapper > p {
+                padding-bottom: 10px;
+            }
+        </style>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>&copy; Revago 2015</p>
+
+            <p>Все права защищены</p>
+        </div>
+        <div class="bottom-links">
+            <ul>
+            <li class="item ">
+            <a href="#">
+                Правила поездки            </a></li>
+            <li class="item ">
+            <a href="#">
+                Календарь летних праздников            </a></li>
+            <li class="item ">
+            <a href="#">
+                Визовая поддержка            </a></li>
+            <li class="item ">
+            <a href="#">
+                Забронировать авиабилет            </a></li>
+            <li class="item ">
+            <a href="#">
+                Аренда автомобиля            </a></li>
+    </ul>
+        </div>
+        <div class="bottom-links">
+            <ul>
+            <li class="item ">
+            <a href="http://revago.sotape.com/about.html">
+                О нас            </a></li>
+            <li class="item ">
+            <a href="http://revago.sotape.com/become-a-host.html">
+                Как сдать виллу            </a></li>
+            <li class="item item__active ">
+            <a href="http://revago.sotape.com/contact.html">
+                Контакты            </a></li>
+    </ul>
+            <ul class="social-links">
+                <li><a href="#" class="vm" target="_blank"></a></li>
+                <li><a href="#" class="fb" target="_blank"></a></li>
+                <li><a href="#" class="in" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div class="bottom-contacts">
+            <p><a class="phone" href="tel:+79689357669">+7 (968) 935-76-69</a></p>
+<p><a class="mail" href="#">hello (at) revago.ru</a></p>        </div>
+    </div>
+    <div class="copy-mobile">
+        <p>&copy; Revago 2015</p>
+
+        <p>Все права защищены</p>
+    </div>
+    <p class="web-studio">Сделано с любовью в веб-студии <a href="http://visario.ru/" target="_blank">Визарио</a></p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/libs/jquery-ui.min.js"></script>
+<script src="/js/libs/datepicker-ru.js"></script>
+<script src="/js/lightgallery.js"></script>
+<script src="/js/jquery.bxslider.min.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/direction.js"></script>
+<link rel="stylesheet" type="text/css" href="http://revago.sotape.com/_debugbar/assets/stylesheets?1453465343">
+<script type="text/javascript" src="http://revago.sotape.com/_debugbar/assets/javascript?1453465343"></script>
+<script type="text/javascript">jQuery.noConflict(true);</script>
+<script type="text/javascript">
+var phpdebugbar = new PhpDebugBar.DebugBar();
+phpdebugbar.addTab("messages", new PhpDebugBar.DebugBar.Tab({"icon":"list-alt","title":"Messages", "widget": new PhpDebugBar.Widgets.MessagesWidget()}));
+phpdebugbar.addIndicator("time", new PhpDebugBar.DebugBar.Indicator({"icon":"clock-o","tooltip":"Request Duration"}), "right");
+phpdebugbar.addTab("timeline", new PhpDebugBar.DebugBar.Tab({"icon":"tasks","title":"Timeline", "widget": new PhpDebugBar.Widgets.TimelineWidget()}));
+phpdebugbar.addIndicator("memory", new PhpDebugBar.DebugBar.Indicator({"icon":"cogs","tooltip":"Memory Usage"}), "right");
+phpdebugbar.addTab("exceptions", new PhpDebugBar.DebugBar.Tab({"icon":"bug","title":"Exceptions", "widget": new PhpDebugBar.Widgets.ExceptionsWidget()}));
+phpdebugbar.addTab("views", new PhpDebugBar.DebugBar.Tab({"icon":"leaf","title":"Views", "widget": new PhpDebugBar.Widgets.TemplatesWidget()}));
+phpdebugbar.addTab("route", new PhpDebugBar.DebugBar.Tab({"icon":"share","title":"Route", "widget": new PhpDebugBar.Widgets.VariableListWidget()}));
+phpdebugbar.addIndicator("currentroute", new PhpDebugBar.DebugBar.Indicator({"icon":"share","tooltip":"Route"}), "right");
+phpdebugbar.addTab("queries", new PhpDebugBar.DebugBar.Tab({"icon":"inbox","title":"Queries", "widget": new PhpDebugBar.Widgets.SQLQueriesWidget()}));
+phpdebugbar.addTab("emails", new PhpDebugBar.DebugBar.Tab({"icon":"inbox","title":"Mails", "widget": new PhpDebugBar.Widgets.MailsWidget()}));
+phpdebugbar.addTab("session", new PhpDebugBar.DebugBar.Tab({"icon":"archive","title":"Session", "widget": new PhpDebugBar.Widgets.VariableListWidget()}));
+phpdebugbar.addTab("request", new PhpDebugBar.DebugBar.Tab({"icon":"tags","title":"Request", "widget": new PhpDebugBar.Widgets.VariableListWidget()}));
+phpdebugbar.setDataMap({
+"messages": ["messages.messages", []],
+"messages:badge": ["messages.count", null],
+"time": ["time.duration_str", '0ms'],
+"timeline": ["time", {}],
+"memory": ["memory.peak_usage_str", '0B'],
+"exceptions": ["exceptions.exceptions", []],
+"exceptions:badge": ["exceptions.count", null],
+"views": ["views", []],
+"views:badge": ["views.nb_templates", 0],
+"route": ["route", {}],
+"currentroute": ["route.uri", ],
+"queries": ["queries", []],
+"queries:badge": ["queries.nb_statements", 0],
+"emails": ["swiftmailer_mails.mails", []],
+"emails:badge": ["swiftmailer_mails.count", null],
+"session": ["session", {}],
+"request": ["request", {}]
+});
+phpdebugbar.restoreState();
+phpdebugbar.ajaxHandler = new PhpDebugBar.AjaxHandler(phpdebugbar);
+phpdebugbar.ajaxHandler.bindToXHR();
+phpdebugbar.setOpenHandler(new PhpDebugBar.OpenHandler({"url":"http:\/\/revago.sotape.com\/_debugbar\/open"}));
+phpdebugbar.addDataSet({"__meta":{"id":"e132cdb9130a4c4558f04663a7df12c0","datetime":"2016-04-07 08:27:08","utime":1460017628.8553,"method":"GET","uri":"\/contact.html","ip":"178.216.76.105"},"php":{"version":"5.4.45","interface":"cgi-fcgi"},"messages":{"count":0,"messages":[]},"time":{"start":1460017628.3473,"end":1460017628.8553,"duration":0.50797605514526,"duration_str":"507.98ms","measures":[{"label":"Booting","start":1460017628.3473,"relative_start":0,"end":1460017628.6942,"relative_end":1460017628.6942,"duration":0.34685397148132,"duration_str":"346.85ms","params":[],"collector":null},{"label":"Application","start":1460017628.6338,"relative_start":0.28642416000366,"end":1460017628.8553,"relative_end":4.0531158447266e-6,"duration":0.22155594825745,"duration_str":"221.56ms","params":[],"collector":null}]},"memory":{"peak_usage":15728640,"peak_usage_str":"15MB"},"exceptions":{"count":0,"exceptions":[]},"views":{"nb_templates":7,"templates":[{"name":"modules.content.clear (resources\/views\/revago\/modules\/content\/clear.blade.php)","param_count":2,"params":["item","metadata"],"type":"blade"},{"name":"forms.contact (resources\/views\/revago\/forms\/contact.blade.php)","param_count":1,"params":["form"],"type":"blade"},{"name":"layout-direction-clear (resources\/views\/revago\/layout-direction-clear.blade.php)","param_count":7,"params":["obLevel","__env","app","errors","item","metadata","text"],"type":"blade"},{"name":"modules.menu.rvg_top_menu (resources\/views\/revago\/modules\/menu\/rvg_top_menu.blade.php)","param_count":2,"params":["items","parent"],"type":"blade"},{"name":"partials.helpers (resources\/views\/revago\/partials\/helpers.blade.php)","param_count":9,"params":["obLevel","__env","app","errors","item","metadata","text","edit_modules","set_currency"],"type":"blade"},{"name":"modules.menu (resources\/views\/revago\/modules\/menu.blade.php)","param_count":2,"params":["items","parent"],"type":"blade"},{"name":"modules.menu (resources\/views\/revago\/modules\/menu.blade.php)","param_count":2,"params":["items","parent"],"type":"blade"}]},"route":{"uri":"GET {alias}","uses":"Closure {#147\n  reflection: \"\"\"\n    \/**\\n\n     * \u041f\u0443\u0431\u043b\u0438\u0447\u043d\u0430\u044f \u0447\u0430\u0441\u0442\u044c, \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446 \u0438 \u0442.\u0434.\\n\n     *\/\\n\n    Closure [ <user> public method {closure} ] {\\n\n      @@ \/var\/www\/revago\/data\/www\/app\/Http\/routes.php 54 - 107\\n\n    \\n\n      - Parameters [1] {\\n\n        Parameter #0 [ <required> $alias ]\\n\n      }\\n\n    }\\n\n    \"\"\"\n}","namespace":"App\\Http\\Controllers","prefix":null,"where":[],"file":"app\/Http\/routes.php:54-107"},"queries":{"nb_statements":14,"nb_failed_statements":0,"accumulated_duration":0.00421,"accumulated_duration_str":"4.21ms","statements":[{"sql":"select * from `menus` where `alias` = 'contact.html' limit 1","params":{"0":"contact.html","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.00028,"duration_str":"280\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `menus` where `lft` <= '29' and `rgt` >= '30' and `id` != '72' order by `menus`.`lft` asc","params":{"0":"29","1":"30","2":"72","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/>The <code>!=<\/code> operator is not standard. Use the <code>&lt;&gt;<\/code> operator to test for inequality instead."},"duration":0.00021,"duration_str":"210\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `content` where `content`.`id` = '41' limit 1","params":{"0":"41","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.00015,"duration_str":"150\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `modules` where `name` = '\u0412\u0435\u0440\u0445\u043d\u0435\u0435 \u043c\u0435\u043d\u044e' limit 1","params":{"0":"\u0412\u0435\u0440\u0445\u043d\u0435\u0435 \u043c\u0435\u043d\u044e","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.00036,"duration_str":"360\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `menus` where `menus`.`id` = '30' limit 1","params":{"0":"30","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.00032,"duration_str":"320\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `menus` where `lft` >= '2' and `lft` < '11' and `id` != '30' order by `menus`.`lft` asc","params":{"0":"2","1":"11","2":"30","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/>The <code>!=<\/code> operator is not standard. Use the <code>&lt;&gt;<\/code> operator to test for inequality instead."},"duration":0.00044,"duration_str":"440\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `include_area` where `name` = 'contact_phone' limit 1","params":{"0":"contact_phone","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.0003,"duration_str":"300\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `modules` where `name` = '\u041d\u0438\u0436\u043d\u0435\u0435 \u043c\u0435\u043d\u044e 1' limit 1","params":{"0":"\u041d\u0438\u0436\u043d\u0435\u0435 \u043c\u0435\u043d\u044e 1","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.00028,"duration_str":"280\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `menus` where `menus`.`id` = '63' limit 1","params":{"0":"63","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.0003,"duration_str":"300\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `menus` where `lft` >= '12' and `lft` < '23' and `id` != '63' order by `menus`.`lft` asc","params":{"0":"12","1":"23","2":"63","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/>The <code>!=<\/code> operator is not standard. Use the <code>&lt;&gt;<\/code> operator to test for inequality instead."},"duration":0.00043,"duration_str":"430\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `modules` where `name` = '\u041d\u0438\u0436\u043d\u0435\u0435 \u043c\u0435\u043d\u044e 2' limit 1","params":{"0":"\u041d\u0438\u0436\u043d\u0435\u0435 \u043c\u0435\u043d\u044e 2","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.00026,"duration_str":"260\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `menus` where `menus`.`id` = '69' limit 1","params":{"0":"69","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.00023,"duration_str":"230\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `menus` where `lft` >= '24' and `lft` < '31' and `id` != '69' order by `menus`.`lft` asc","params":{"0":"24","1":"31","2":"69","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/>The <code>!=<\/code> operator is not standard. Use the <code>&lt;&gt;<\/code> operator to test for inequality instead."},"duration":0.00033,"duration_str":"330\u03bcs","stmt_id":null,"connection":"revago"},{"sql":"select * from `include_area` where `name` = 'contact_bottom' limit 1","params":{"0":"contact_bottom","hints":"Use <code>SELECT *<\/code> only if you need all columns from table<br \/><code>LIMIT<\/code> without <code>ORDER BY<\/code> causes non-deterministic results, depending on the query execution plan"},"duration":0.00032,"duration_str":"320\u03bcs","stmt_id":null,"connection":"revago"}]},"swiftmailer_mails":{"count":0,"mails":[]},"session":{"flash":"array:2 [\n  \"old\" => []\n  \"new\" => []\n]","_token":"CUp34BYnkNzPdCoSzrDHs3Bpx0giM5yXcKmm9Nxe","user_currency":"rub","PHPDEBUGBAR_STACK_DATA":"[]","_previous":"array:1 [\n  \"url\" => \"http:\/\/revago.sotape.com\/_debugbar\/assets\/stylesheets?1453465343\"\n]","captcha":"array:2 [\n  \"sensitive\" => false\n  \"key\" => \"$2y$10$bu9ASMbbBkHcaV8hJl0lYes\/PhUC6Q5r58tOEk3zVfMjjAW8vwRka\"\n]"},"request":{"format":"html","content_type":"text\/html; charset=UTF-8","status_text":"OK","status_code":"200","request_query":"array:1 [\n  \"active_menu_tree_ids\" => array:3 [\n    0 => \"72\"\n    1 => \"1\"\n    2 => \"69\"\n  ]\n]","request_request":"array:1 [\n  \"active_menu_tree_ids\" => array:3 [\n    0 => \"72\"\n    1 => \"1\"\n    2 => \"69\"\n  ]\n]","request_headers":"array:9 [\n  \"host\" => array:1 [\n    0 => \"revago.sotape.com\"\n  ]\n  \"x-forwarded-for\" => array:1 [\n    0 => \"178.216.76.105\"\n  ]\n  \"x-forwarded-proto\" => array:1 [\n    0 => \"http\"\n  ]\n  \"connection\" => array:1 [\n    0 => \"close\"\n  ]\n  \"user-agent\" => array:1 [\n    0 => \"Mozilla\/5.0 (Windows NT 6.3; WOW64; rv:45.0) Gecko\/20100101 Firefox\/45.0\"\n  ]\n  \"accept\" => array:1 [\n    0 => \"text\/html,application\/xhtml+xml,application\/xml;q=0.9,*\/*;q=0.8\"\n  ]\n  \"accept-language\" => array:1 [\n    0 => \"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\"\n  ]\n  \"accept-encoding\" => array:1 [\n    0 => \"gzip, deflate\"\n  ]\n  \"cookie\" => array:1 [\n    0 => \"_ym_uid=1454918545971406265; laravel_session=eyJpdiI6IlpWU1N1VlVcL3JlOE1xR3NYSEhNMFwvZz09IiwidmFsdWUiOiJqNnFOcG5OTGZjbmRLRVJ2SjBzUjBWeDlCTEd6TDEyYWhKMmRFaEt5M1wvbmlsY2o3TEIrRWRkVjhOeElXbEtkN0wrdDVWRkhOYU1tUk1FcTRzZnQ4WlE9PSIsIm1hYyI6ImU5ZmViZTc3YzIzODk1YzYyY2RjZTkxMTZlOWFkYWIyMGNkNzAzZmJmODQyN2UwNjUxOGJjNmYxODVjM2FhOGUifQ%3D%3D\"\n  ]\n]","request_server":"array:37 [\n  \"REDIRECT_REDIRECT_STATUS\" => \"200\"\n  \"REDIRECT_HANDLER\" => \"application\/x-httpd-php5\"\n  \"REDIRECT_STATUS\" => \"200\"\n  \"HTTP_HOST\" => \"revago.sotape.com\"\n  \"HTTP_X_FORWARDED_FOR\" => \"178.216.76.105\"\n  \"HTTP_X_FORWARDED_PROTO\" => \"http\"\n  \"HTTP_CONNECTION\" => \"close\"\n  \"HTTP_USER_AGENT\" => \"Mozilla\/5.0 (Windows NT 6.3; WOW64; rv:45.0) Gecko\/20100101 Firefox\/45.0\"\n  \"HTTP_ACCEPT\" => \"text\/html,application\/xhtml+xml,application\/xml;q=0.9,*\/*;q=0.8\"\n  \"HTTP_ACCEPT_LANGUAGE\" => \"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\"\n  \"HTTP_ACCEPT_ENCODING\" => \"gzip, deflate\"\n  \"HTTP_COOKIE\" => \"_ym_uid=1454918545971406265; laravel_session=eyJpdiI6IlpWU1N1VlVcL3JlOE1xR3NYSEhNMFwvZz09IiwidmFsdWUiOiJqNnFOcG5OTGZjbmRLRVJ2SjBzUjBWeDlCTEd6TDEyYWhKMmRFaEt5M1wvbmlsY2o3TEIrRWRkVjhOeElXbEtkN0wrdDVWRkhOYU1tUk1FcTRzZnQ4WlE9PSIsIm1hYyI6ImU5ZmViZTc3YzIzODk1YzYyY2RjZTkxMTZlOWFkYWIyMGNkNzAzZmJmODQyN2UwNjUxOGJjNmYxODVjM2FhOGUifQ%3D%3D\"\n  \"PATH\" => \"\/sbin:\/usr\/sbin:\/bin:\/usr\/bin\"\n  \"SERVER_SIGNATURE\" => \"<address>Apache\/2.2.22 (@RELEASE@) Server at revago.sotape.com Port 80<\/address>\\n\"\n  \"SERVER_SOFTWARE\" => \"Apache\/2.2.22 (@RELEASE@)\"\n  \"SERVER_NAME\" => \"revago.sotape.com\"\n  \"SERVER_ADDR\" => \"127.0.0.1\"\n  \"SERVER_PORT\" => \"80\"\n  \"REMOTE_ADDR\" => \"178.216.76.105\"\n  \"DOCUMENT_ROOT\" => \"\/var\/www\/revago\/data\/www\/revago.sotape.com\"\n  \"SERVER_ADMIN\" => \"webmaster@revago.sotape.com\"\n  \"SCRIPT_FILENAME\" => \"\/var\/www\/revago\/data\/www\/revago.sotape.com\/index.php\"\n  \"REMOTE_PORT\" => \"33387\"\n  \"REDIRECT_URL\" => \"\/index.php\"\n  \"GATEWAY_INTERFACE\" => \"CGI\/1.1\"\n  \"SERVER_PROTOCOL\" => \"HTTP\/1.0\"\n  \"REQUEST_METHOD\" => \"GET\"\n  \"QUERY_STRING\" => \"\"\n  \"REQUEST_URI\" => \"\/contact.html\"\n  \"SCRIPT_NAME\" => \"\/index.php\"\n  \"ORIG_SCRIPT_FILENAME\" => \"\/var\/www\/php-bin\/revago\/php\"\n  \"ORIG_PATH_INFO\" => \"\/index.php\"\n  \"ORIG_PATH_TRANSLATED\" => \"\/var\/www\/revago\/data\/www\/revago.sotape.com\/index.php\"\n  \"ORIG_SCRIPT_NAME\" => \"\/php-bin\/php\"\n  \"PHP_SELF\" => \"\/index.php\"\n  \"REQUEST_TIME_FLOAT\" => 1460017628.3402\n  \"REQUEST_TIME\" => 1460017628\n]","request_cookies":"array:2 [\n  \"_ym_uid\" => null\n  \"laravel_session\" => \"3a345dfac865c1e3841fb50b2260190286164cb1\"\n]","response_headers":"array:5 [\n  \"cache-control\" => array:1 [\n    0 => \"private, must-revalidate\"\n  ]\n  \"date\" => array:1 [\n    0 => \"Thu, 07 Apr 2016 08:27:08 GMT\"\n  ]\n  \"content-type\" => array:1 [\n    0 => \"text\/html; charset=UTF-8\"\n  ]\n  \"pragma\" => array:1 [\n    0 => \"no-cache\"\n  ]\n  \"expires\" => array:1 [\n    0 => -1\n  ]\n]","path_info":"\/contact.html","session_attributes":"array:6 [\n  \"flash\" => array:2 [\n    \"old\" => []\n    \"new\" => []\n  ]\n  \"_token\" => \"CUp34BYnkNzPdCoSzrDHs3Bpx0giM5yXcKmm9Nxe\"\n  \"user_currency\" => \"rub\"\n  \"PHPDEBUGBAR_STACK_DATA\" => []\n  \"_previous\" => array:1 [\n    \"url\" => \"http:\/\/revago.sotape.com\/_debugbar\/assets\/stylesheets?1453465343\"\n  ]\n  \"captcha\" => array:2 [\n    \"sensitive\" => false\n    \"key\" => \"$2y$10$bu9ASMbbBkHcaV8hJl0lYes\/PhUC6Q5r58tOEk3zVfMjjAW8vwRka\"\n  ]\n]"}}, "e132cdb9130a4c4558f04663a7df12c0");
+
+</script>
+</body>
+</html>
