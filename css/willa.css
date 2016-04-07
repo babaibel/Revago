@@ -402,6 +402,11 @@ h4 {
   height: 255px;
 }
 
+.willa-gallery .gal__inner IMG{
+  display: none;
+  visibility: hidden;
+}
+
 .willa-gallery .gallery-block{
   margin: 0 -5px;
 }

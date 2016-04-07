@@ -9,8 +9,11 @@ $(document).ready(function  () {
     }
   });
   $('#aniimated-thumbnials').lightGallery({
-      selector: '.screenerr'
+      selector: '.screenerr',
+      thumbnail: true,
+      animateThumb: true
     });
+
   $('.bxslider').bxSlider({
     maxSlides: 3,
     maxWidth: 930,

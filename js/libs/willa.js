@@ -174,7 +174,6 @@ $(document).ready(function () {
 
 $(window).bind('load resize', function () {
     if ($(window).width() > 991) {
-        $('#aniimated-thumbnials').lightGallery({thumbnail: true, animateThumb: false, showThumbByDefault: true,});
         $(window).scroll(function () {
             var el = $(window).scrollTop();
             var start = $('#scrolll').offset().top;
