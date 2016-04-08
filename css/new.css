@@ -435,10 +435,10 @@
   right: 0;
 }
 
-/* .about-project .search-tab .col-2 {
+.about-project .search-tab .col-2 {
   margin: 0 1%!important;
   width: 31.3333%!important;
-} */
+}
 
 .search-tab textarea{
   background: #9b9b9b;
@@ -649,7 +649,7 @@ header.inner-page__header h1.h1-and-subtitle {
 }
 
 .contact-form .search-tab .col-2 {
-  margin: 0 0 20px;
+  margin: 0 0 20px!important;
   padding: 0 10px;
   width: 50% !important;
 }
