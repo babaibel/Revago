@@ -635,6 +635,11 @@ header.inner-page__header h1.h1-and-subtitle {
   padding-right: 0;
 }
 
+.contact-form{
+  margin: 30px 0;
+  width: 50%;
+}
+
 .contact-form .container{
   padding: 0!important;
 }
@@ -656,6 +661,11 @@ header.inner-page__header h1.h1-and-subtitle {
 
 .contact-form .search-tab .form-block__row{
   margin: 0 -10px;
+}
+
+.contact-form input,
+.contact-form input:focus{
+  background: #9b9b9b;
 }
 
 .about-project .contact-form{
@@ -805,6 +815,13 @@ color: #bababa;
 .bold-italic-text{
   font-style: italic;
   font-weight: 500;
+}
+
+.search-form .search-tab .col-2 {
+  float: left;
+  margin: 0 0 15px;
+  width: 33.3333%;
+  padding: 0 5px;
 }
 
 @media all and (max-width: 1350px){
