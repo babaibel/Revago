@@ -760,22 +760,31 @@ color: #bababa;
   margin: 0 auto;
 }
 
-.h3-content-subtitle{
+.content-section h2{
   margin: 0 0 15px;
   font: 500 26px/28px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
+.content-section h3,
+.h3-content-subtitle{
+  margin: 0 0 15px;
+  font: 500 24px/26px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.content-section ul,
 .list-default{
   padding: 0;
   margin: 0 0 20px;
   list-style: none;
 }
 
+.content-section ul li,
 .list-default li{
   position: relative;
   padding-left: 40px;
   margin: 0 0 5px;
 }
+.content-section ul li:before,
 .list-default li:before{
   content: "";
   width: 16px;
@@ -788,15 +797,18 @@ color: #bababa;
   top: 5px;
 }
 
+.content-section ol,
 .list-num{
   list-style-type: none;
   counter-reset:  item;
   margin: 0 0 20px;
   padding: 0;
 }
+.content-section ol li,
 .list-num li{
   margin: 0 0 5px;
 }
+.content-section ol li:before,
 .list-num li:before {
   content: counter(item) '. ';
   counter-increment: item;
