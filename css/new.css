@@ -760,15 +760,20 @@ color: #bababa;
   margin: 0 auto;
 }
 
+.content-section h1{
+  margin: 0 0 20px;
+  font: 500 26px/28px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
 .content-section h2{
   margin: 0 0 15px;
-  font: 500 26px/28px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font: 500 22px/24px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 .content-section h3,
 .h3-content-subtitle{
   margin: 0 0 15px;
-  font: 500 24px/26px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font: 500 20px/22px Avenir,Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 .content-section ul,
