@@ -848,6 +848,23 @@ color: #bababa;
   width: 30%;
 }
 
+.white-popup-block{
+  position: relative;
+}
+
+.loading:after {
+  background: url(../css/images/loading_spinner.gif) no-repeat center center rgba(255, 255, 255, 0.8);
+  background-size: 64px 64px;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1047;
+}
+
 @media all and (max-width: 1350px){
   .event-calendar__event{
     position: absolute;
