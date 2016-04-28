@@ -186,11 +186,15 @@ header {
 }
 
 #about-slider .carousel-inner .item{
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  overflow: hidden;
   width: 595px;
   height: 376px;
+}
+
+#about-slider .carousel-inner .item img{
+  display: block;
+  height: 376px;
+  width: auto;
 }
 
 
